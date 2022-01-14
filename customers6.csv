@@ -1,0 +1,960 @@
+name,address,zip
+Bibb Correctional Facility,565 Bibb Lane,35034
+"Dorm, Bed number",P.O. Box 5107,36089
+Donaldson Correctional Facility,100 Warrior Lane,35023
+Draper Correctional Facility,P.O. Box 1107,36025
+Easterling Correctional Facility,200 Wallace Drive,36017
+Elmore Correctional Center,3520 Marion Spillway Road,36025
+Fountain Correctional Facility,Fountain 3800,36503
+Hamilton Aged & Infirmed,223 Sasser Drive,35570
+Holman Correctional Facility,Holman 3700,36503
+Kilby Correctional Facility,P.O. Box 150,36057
+Limestone Correctional Facility,28779 Nick Davis Rd,35749
+Montgomery Women's Facility,P.O. Box 75,36057
+Red Eagle Work Center,1290 Red Eagle Road,36110
+St. Clair Correctional Facility,1000 St. Clair Road,35146
+Staton Correctional Facility,P.O. Box 56,36025
+Tutwiler Prison for Women,8966 US Hwy 231 N,36092
+Ventress Correctional Facility,P.O. Box 767,36016
+Anchorage Correctional Complex,1400 East 4th Avenue,99501
+Anvil Mountain Correctional Center,PO Box 730,99762
+Fairbanks Correctional Center,1931 Egan Avenue,99701
+Goose Creek Correctional Center,P.O. 877790,99687
+Hiland Mountain Correctional Center,9101 Hesterberg Road,99577
+Ketchikan Correctional Center,1201 Schoenbar Rd,99901
+Lemon Creek Correctional Center,2000 Lemon Creek Road,99801
+Mat-Su Pretrial,339 East Dogwood Road,99645
+Palmer Correctional Center,P.O. Box 919,99645
+Point Mackenzie Correctional Farm,P.O. Box 877730,99687
+Spring Creek Correctional Center,3600 Bette Cato Avenue,99664
+Wildwood Correctional Center,10 Chugach Avenue,99611
+Wildwood Correctional Center,10 Chugach Avenue,99611
+Yukon Kuskokwim Correctional Center,PO Box 400,99559
+ASPC - Douglas,P.O. Box 3867,85608
+Inmate Name and ADC #,P.O. Box 3400,85132
+"Inmate Name, ID Number",P.O. Box 8200,85132
+"Inmate Name, ID Number",P.O. Box 5000,85132
+"Inmate Name, ID Number",PO Box 3009,86402
+"Inmate Name, ID Number",PO Box 3009,86402
+Inmate Name and ADC#,P.O. Box 3500,85326
+Inmate Name and ADC#,P.O. Box 3000,85395
+Inmate Name and ADC#,P.O. Box 52109,85072
+Inmate Name and ADC#,896 S. Cook Road,85546
+Inmate Name and ADC#,P.O. Box 24409,85734
+Apache Unit,PO Box 3240,85936
+Complex Lock-Up,2100 S. Hwy 87,86047
+Inmate Name and ADC#,P.O. Box 8939,85349
+"Inmate's Name, ID Number",P.O. Box 9200,85132
+Arizona State Prison - Phoenix West,P.O. Box 18640,85005
+Red Rock Correctional Center,1750 East Arica Road,85131
+Benton Unit,6701 Highway 67,72015
+Boot Camp Program,P.O. Box 240,72168
+Cummins Unit,P.O. Box 500,71644
+Delta Regional Unit,880 East Gaines,71638
+East Arkansas Regional Unit,P.O. Box 180,72320
+Grimes Unit,300 Corrections Drive,72112
+"J. Aaron Hawkins, Sr., Center for Women",P.O. Box 1000,72183
+Maximum Security Unit,2501 State Farm Rd.,72168
+McPherson Unit,302 Corrections Drive,72112
+Mississippi County Work Release Center,P.O. Box 10,72358
+North Central Unit,10 Prison Circle,72519
+Northwest Arkansas Work Release Center,200 East Price Avenue,72764
+Ouachita River Correctional Unit,P.O. Box 1630,72104
+Pine Bluff Unit,890 Free Line Dr.,71603
+Randall L. Williams Correctional Facility,7206 West 7th Street,71603
+Texarkana Regional Correction Center,305 East 5th Street,71854
+Tucker Unit,P.O. Box 240,72168
+Varner Unit,P.O. Box 600,71644
+Wrightsville Unit,P.O. Box 1000,72183
+"A Facility, MSF Facility",P.O. Box 2500,96127
+Housing Unit 1,PO Box 107,93581
+Housing Unit 2,PO Box 608,93581
+CIM I,P.O. Box 600,91708
+CIM I,P.O. Box 600,91708
+California Institution for Women,PO Box 8100,92878
+California Medical Facility,P.O. Box 2000,95696
+California Men's Colony EAST,P.O. Box 8101,93409
+California Men's Colony EAST,P.O. Box 8101,93409
+California Rehabilitation Center,P.O. Box 3535,92860
+California Rehabilitation Center,P.O. Box 3535,92860
+(Inmate's Housing Unit),P.O. Box 4430,93539
+California State Prison-Sacramento,P.O. Box 290066,95671
+"California State Prison, Solano",P. O. Box 4000,95696
+Facility A & B,P.O. Box 5248,93212
+Facility A & B,P.O. Box 5248,93212
+Facility A,PO Box 5004,92233
+Facility B,PO Box 5005,92233
+Facility A,P.O. Box 901,92251
+Facility B,P.O. Box 911,92251
+Chuckawalla Valley State Prison,P.O. Box 2349,92226
+Correctional Training Facility - South (Facility D),PO Box 690,93960
+Correctional Training Facility - Central (Facility C),PO Box 689,93960
+Deuel Vocational Institution,P.O. Box 600,95378
+Folsom State Prison,P.O. Box 715071,95671
+"High Desert State Prison, California",P.O. Box 3030,96127
+Ironwood State Prison,P.O. Box 2199,92226
+Facility A,P.O. Box 5101,93216
+Facility A,P.O. Box 5101,93216
+A Yard,PO Box 409020,95640
+B Yard,PO Box 409040,95640
+A Yard,PO Box 5000,93215
+B Yard,PO Box 4999,93216
+Pelican Bay State Prison,P.O. Box 7500,95532
+Pleasant Valley State Prison,P.O. Box 8500,93210
+Facility A,P.O. Box 799001,92179
+Facility B,P.O. Box 799002,92179
+Salinas Valley State Prison,PO Box 1050,93960
+"Inmate Name, ID",San Quentin State Prison,94974
+Sierra Conservation Center,5100 O'Byrnes Ferry Road,95327
+Valley State Prison,PO Box 92,93610
+A Facility,PO Box 4400,93280
+B Facility,PO Box 5500,93280
+Arrowhead Correctional Center,PO Box 300,81215
+Arkansas Valley Correctional Facility,12750 Highway 96,81034
+Delta Correctional Center,11363 Lockhart Road,81416
+Denver Reception & Diagnostic Center,P.O. Box 392004,80239
+Four Mile Correctional Center,PO Box 300,81215
+Rifle Correctional Center,200 County Road 219,81650
+Skyline Correctional Center,PO Box 300,81215
+Trinidad Correctional Facility,21000 Highway 350 East,81059
+Youthful Offender System,1300 West 13th Street,81003
+Bent County Correctional Facility,11560 Road FF75,81054
+Cheyenne Mountain Re-entry Center,2925 E. Las Vegas Street,80906
+Crowley County Correctional Facility,6564 State Highway 96,81062
+Kit Carson Correctional Center,P.O. Box 2000,80807
+Bridgeport Correctional Center,1106 North Avenue,6604
+Brooklyn Correctional Institution,59 Hartford Road,6234
+Cheshire Correctional Institution,900 Highland Avenue,6410
+Corrigan-Radgowski Correctional Center,986 Norwich-New London Turnpike,6382
+Enfield Correctional Institution,PO Box 1500,6082
+Garner Correctional Institution,PO Box 5500,6470
+Hartford Correctional Center,177 Weston Street,6120
+MacDougall-Walker Correctional Institution,"1153 East Street, South",6080
+Manson Youth Institution,42 Jarvis Street,6410
+New Haven Correctional Center,PO Box 8000,6511
+Northern Correctional Institution,PO Box 665,6071
+Osborn Correctional Institution,PO Box 100,6071
+Robinson Correctional Institution,PO Box 1400,6082
+Willard-Cybulski Correctional Institution,391 Shaker Road,6082
+York Correctional Institution,201 West Main Street,6357
+Baylor Women's Correctional Institution,660 Baylor Boulevard,19720
+Central Violation of Probation Center,P.O. Box 5003,19977
+Hazel D. Plant Women's Treatment Facility,620 Baylor Blvd,19720
+Howard R. Young Correctional Institution,P.O. Box 9279,19809
+James T. Vaughn Correctional Center,1181 Paddock Road,19977
+Morris Community Corrections Center,300 Water Street,19904
+Plummer Community Corrections Center,38 Todds Lane,19805
+Sussex Boot Camp,P.O. Box 500,19947
+Sussex Community Corrections Center,23207 Dupont Blvd.,19947
+Building & Tier of housing,PO Box 500,19947
+Webb Community Correctional Facility,200 Greenbank Road,19808
+Central Detention Facility,1901 D Street SE,20003
+Central Detention Facility,1901 D Street SE,20003
+Central Detention Facility,1901 D Street SE,20003
+Central Detention Facility,1901 D Street SE,20003
+Central Detention Facility,1901 D Street SE,20003
+Central Detention Facility,1901 D Street SE,20003
+"Apalachee Correctional Institution, East Unit",35 Apalachee Drive,32460
+"Apalachee Correctional Institution, West Unit",52 West Unit Drive,32460
+Avon Park Correctional Institution,P.O. Box 1100,33826
+Baker Correctional Institution,20706 U.S. Highway 90 West,32087
+Bay Correctional Facility,5400 Bayline Drive,32404
+Blackwater River Correctional Facility,5914 Jeff Ates Road,32583
+Calhoun Correctional Institution,19562 SE Institution Dr.,32424
+Central Florida Reception Center,7000 H C Kelley Rd.,32831
+"Central Florida Reception Center, East Unit",7000 H C Kelley Rd.,32831
+"Central Florida Reception Center, South Unit",7000 H C Kelley Rd.,32831
+Century Correctional Institution,400 Tedder Road,32535
+Charlotte Correctional Institution,33123 Oil Well Road,33955
+Columbia Correctional Institution,216 S.E. Corrections Way,32025
+Cross City Correctional Institution,568 N.E. 255th Street,32628
+Dade Correctional Institution,19000 S.W. 377th Street,33034
+Desoto Annex,13617 S.E. Highway 70,34266
+Everglades Correctional Institution,1599 S.W. 187th Avenue,33194
+Florida State Prison,7819 N.W. 228th Street,32026
+Franklin Correctional Institution,1760 Highway 67 North,32322
+Gadsden Correctional Facility,6044 Greensboro Highway,32351
+Graceville Correctional Facility,5168 Ezell Rd.,32440
+Gulf Correctional Institution,500 Ike Steele Road,32465
+Hamilton Correctional Institution,10650 S.W. 46th Street,32052
+Hardee Correctional Institution,6901 State Road 62,33834
+Hernando Correctional Institution,16415 Spring Hill Drive,34604
+Holmes Correctional Institution,3142 Thomas Drive,32425
+Homestead Correctional Institution,19000 S.W. 377th Street,33034
+Jackson Correctional Institution,5563 10th Street,32445
+Jefferson Correctional Institution,1050 Big Joe Road,32344
+Lake City Correctional Facility,7906 East Highway 90,32055
+Lake Correctional Institution,19225 U.S. Highway 27,34715
+Lancaster Correctional Institution,3449 S.W. State Road 26,32693
+Lawtey Correctional Institution,7819 N.W. 228th Street,32026
+Liberty Correctional Institution,11064 N.W. Dempsey Barron Road,32321
+Lowell Correctional Institution,11120 NW Gainesville Rd.,34482
+Madison Correctional Institution,382 Southwest MCI Way,32340
+Marion Correctional Institution,P.O. Box 158,32663
+Martin Correctional Institution,1150 S.W. Allapattah Road,34956
+Mayo Correctional Institution and Annex,8784 US Highway 27 West,32066
+Moore Haven Correctional Facility,Post Office Box 69,33471
+Northwest Florida Reception Center,4455 Sam Mitchell Drive,32428
+Okaloosa Correctional Institution,3189 Colonel Greg Malloy Road,32539
+Okeechobee Correctional Institution,3420 N.E. 168th Street,34972
+Polk Correctional Institution,10800 Evans Road,33868
+Putnam Correctional Institution,128 Yelvington Road,32131
+Quincy Annex,2225 Pat Thomas Parkway,32351
+Reception and Medical Center,P.O. Box 628,32054
+Santa Rosa Correctional Institution and Annex,5850 East Milton Road,32583
+South Bay Correctional Facility,600 U.S. Highway 27 South,33493
+South Florida Reception Center,14000 NW 41st Street,33178
+South Unit,13910 NW 41st Street,33178
+Sumter Correctional Institution,9544 County Road 476B,33513
+Suwannee Correctional Institution,5964 U.S. Highway 90,32060
+Taylor Correctional Institution,8501 Hampton Springs Road,32348
+Tomoka Correctional Institution,3950 Tiger Bay Road,32124
+Union Correctional Institution,7819 N.W. 228th Street,32026
+Wakulla Correctional Institution,110 Melaleuca Drive,32327
+Walton Correctional Institution,691 Institution Road,32433
+Zephyrhills Correctional Institution,2739 Gall Boulevard,33541
+Arrendale State Prison,P.O. Box 709,30510
+Augusta State Medical Prison,3001 Gordon Highway,30813
+Autry State Prison,P.O. Box 648,31779
+Baldwin State Prison,P.O. Box 218,31034
+Bulloch County Correctional Institution,17301 U.S. Highway 301 North Building 209,30458
+Burruss Correctional Training Center,P.O. Box 5849,31029
+Calhoun State Prison,P.O. Box 249,39866
+Carroll County Correctional Institution,96 Horsley Mill Road,30117
+Central State Prison,4600 Fulton Mill Road,31208
+Clarke County Correctional Institution,2825 County Farm Road,30605
+Clayton County Correctional Institution,P.O. Box 309,30250
+Coastal State Prison,P.O. Box 7150,31418
+Coffee Correctional Facility,P.O. Box 650,31554
+Colquitt County Correctional Institution,"P.O. Box 339, Route 2",31768
+Coweta County Correctional Institution,101 Selt Road,30263
+Decatur County Correctional Institution,1153 Airport Road,39817
+Dodge State Prison,P.O. Box 276,31012
+Dooly State Prison,P.O. Box 750,31091
+Effingham County Correctional Institution,P.O. Box 235,31329
+Emanuel Womens Facility,P.O. Box 218,30401
+Floyd County Correctional Institution,"329 Black Bluff Road, SW",30161
+Georgia Diagnostic and Classification Prison,P.O. Box 3877,30233
+Georgia State Prison,300 1st Ave South,30453
+Gwinnett County Correctional Institution,750 High Hope Road,30043
+Hall County Correctional Institution,1694 Barber Road,30507
+Hancock State Prison,P.O. Box 339,31087
+Harris County Correctional Institution,9982 Highway 116,31811
+Hays State Prison,P.O. Box 668,30753
+Jackson County Correctional Institution,265 I.W. Davis Road,30549
+Jefferson County Correctional Institution,1159 Clarks Mill Road,30434
+Johnson State Prison,P.O. Box 344,31096
+Lee State Prison,153 Pinewood Drive,31763
+Long State Prison,P.O. Box 70,31316
+Macon State Prison,P.O. Box 426,31068
+Mitchell County Correctional Institution,"Route 4, P.O. Box 228C",31730
+Montgomery State Prison,P.O. Box 256,30445
+Muscogee County Correctional Institution,P.O. Box 84041,31908
+Philips State Prison,2989 West Rock Quarry Road,30519
+Pulaski State Prison,P.O. Box 839,31036
+Richmond County Correctional Institution,2314 Tobacco Road,30906
+Rogers State Prison,1978 Georgia Highway 147,30453
+Rutledge State Prison,P.O. Box 8409,31908
+Screven County Correctional Institution,P.O. Box 377,30467
+Smith State Prison,P.O. Box 726,30427
+Spalding County Correctional Institution,295 Justice Boulevard,30224
+Telfair State Prison,P.O. Box 549,31037
+Terrell County Correctional Institution,3108 Albany Highway,39842
+Thomas County Correctional Institution,324 County Farm Road,31757
+Troup County Correctional Institution,2508 Hamilton Road,30240
+Valdosta State Prison,P.O. Box 310,31603
+Valdosta State Prison,P.O. Box 310,31603
+Walker State Prison,P.O. Box 98,30739
+Ware State Prison,3620 Harris Road,31501
+Washington State Prison,P.O. Box 206,31018
+Washington State Prison,P.O. Box 206,31018
+Wheeler Correctional Facility,P.O. Box 466,30411
+Wilcox State Prison,P.O. Box 397,31001
+c/o Halawa Correctional Facility,99-902 Moanalua Road,96701
+Saguaro Correctional Center,1252 E. Arica Road,85131
+Waiawa Correctional Facility,P.O. Box 1839,96782
+Women's Community Correctional Center,42-477 Kalanianaole Highway,96734
+Correctional Alternative Placement Program (CAPP),15505 S. Pleasant Valley Rd.,83634
+Idaho State Correctional Center (ISCC),PO Box 70010,83707
+Idaho Correctional InstitutionOrofino (ICIO),"Hospital Drive N., #23",83544
+Idaho Maximum Security Institution,PO Box 51,83707
+Idaho State Correctional Institution,PO Box 14,83707
+North Idaho Correctional Institution,"HC3, Box 147",83522
+South Boise Women's Correctional Center,13200 S. Pleasant Valley Rd.,83634
+South Idaho Correctional Institution,PO Box 8509,83707
+Pocatello Women's Correctional Center,1451 Fore Road,83204
+St. Anthony Work Camp,125 N. 8th West,83445
+Big Muddy River Correctional Center,251 N. Illinois Highway 37,62846
+Centralia Correctional Center,P.O. Box 7711,62801
+Crossroads ATC,3210 West Arthington,60624
+Danville Correctional Center,3820 East Main Street,61834
+Decatur Correctional Center,P.O. Box 3066,62524
+Dixon Correctional Center,2600 N. Brinton Avenue,61021
+East Moline Correctional Center,100 Hillcrest Road,61244
+Fox Valley Adult Transition Center,1329 North Lake Street,60506
+Graham Correctional Center,P.O. Box 499,62049
+Hill Correctional Center,P.O. Box 1700,61402
+Illinois River Correctional Center,P.O. Box 999,61520
+Jacksonville Correctional Center,2268 East Morton Avenue,62650
+Lawrence Correctional Center,10930 Lawrence Road,62466
+Lincoln Correctional Center,P.O. Box 549,62656
+Logan Correctional Center,P.O. Box 1000,62656
+Menard Correctional Center,P.O. Box 1000,62259
+North Lawndale Adult Transition Center,2839 West Fillmore,60612
+Peoria Adult Transition Center,607-613 North Main,61602
+Pinckneyville Correctional Center,P.O. Box 999,62274
+Pontiac Correctional Center,P.O. Box 99,61764
+Robinson Correctional Center,13423 East 1150th Avenue,62454
+Shawnee Correctional Center,6665 State Route 146 East,62995
+Sheridan Correctional Center,4017 E. 2603 Road,60551
+Southwestern Illinois Correctional Center,P.O. Box 129,62203
+Stateville Correctional Center,P.O. Box 112,60434
+Taylorville Correctional Center,P.O. Box 1000,62568
+Vandalia Correctional Center,P.O. Box 500,62471
+Vienna Correctional Center,6695 State Route #146 East,62995
+Western Illinois Correctional Center,2500 Rt. 99 South,62353
+Branchville Correctional Facility,21390 Old State Road 37,47514
+Chain O Lakes Correctional Facility,3516 E 75 South,46701
+Correctional Industrial Facility,P.O. Box 600,46064
+Edinburgh Correctional Facility,P.O. Box 470,46124
+Henryville Correctional Facility,P.O. Box 148,47126
+Heritage Trail Correctional Facility,501 W. Main Street,46168
+Indiana State Prison,P.O. Box 41,46361
+Indiana Women's Prison,2596 Girls School Road,46214
+Indianapolis Re-Entry Educational Facility,401 North Randolph Street,46201
+Madison Correctional Facility,800 MSH Bus Stop Drive,47250
+Miami Correctional Facility,3038 West 850 South,46914
+New Castle Correctional Facility,P.O. Box E,47362
+Pendleton Correctional Facility,P.O. Box 30,46064
+Plainfield Correctional Facility,727 Moon Road,46168
+Putnamville Correctional Facility,1946 West U.S. Hwy 40,46135
+Reception Diagnostic Center,737 Moon Road,46168
+Rockville Correctional Facility,811 W. 50 N,47872
+Wabash Valley Correctional Facility,P.O. Box 500,47838
+Westville Correctional Facility,5501 S.1100 W.,46391
+Anamosa State Penitentiary,PO Box 10,52205
+Clarinda Correctional Facility,P.O. Box 1338,51632
+Fort Dodge Correctional Facility,1550 L Street,50501
+Iowa Correctional Institution for Women,420 Mill Street SW,50169
+Iowa Medical and Classification Center,2700 Coral Ridge Ave,52241
+Iowa State Penitentiary,P.O. Box 316,52627
+Mount Pleasant Correctional Facility,1200 East Washington,52641
+Newton Correctional Facility,P. O. Box 218,50208
+North Central Correctional Facility,313 Lanedale,50579
+El Dorado Correctional Facility,P.O. Box 311,67042
+Ellsworth Correctional Facility,P.O. Box 107,67439
+Hutchinson Correctional Facility,P.O. Box 1568,67504
+Lansing Correctional Facility,P.O. Box 2,66043
+Larned Correctional Mental Health Facility,1318 KS Highway 264,67550
+Norton Correctional Facility,P.O. Box 546,67654
+NCF-East Unit,P.O. Box 527,67669
+Topeka Correctional Facility,815 S.E. Rice Road,66607
+Winfield Correctional Facility,1806 Pinecrest Circle,67156
+Wichita Work Release,401 S. Emporia St.,67202
+Blackburn Correctional Complex,3111 Spurr Road,40511
+Eastern Kentucky Correctional Complex,200 Road to Justice,41472
+Green River Correctional Complex,P. O. Box 9300,42330
+Kentucky State Penitentiary,266 Water Street,42038
+Kentucky State Reformatory,3001 W Hwy 146,40032
+Little Sandy Correctional Complex,Route 5 Box 1000,41171
+Luther Luckett Correctional Complex,P. O. Box 6,40031
+Roederer Correctional Complex,P.O. Box 69,40031
+Western Kentucky Correctional Complex,374 New Bethel Church Road,42411
+Allen Correctional Center,3751 Lauderdale Woodyard Road,70648
+Avoyelles Correctional Center,1630 Prison Road,71327
+David Wade Correctional Center,670 Bell Hill Road,71040
+Dixon Correctional Institute,Post Office Box 788,70748
+Elayn Hunt Correctional Center,P.O. Box 174,70776
+Louisiana Correctional Institute for Women,Post Office Box 26,70776
+Louisiana State Penitentiary,General Delivery,70712
+B.B. Rayburn Correctional Center,27268 Hwy. 21 North,70426
+Winn Correctional Center,P.O. Box 1260,71483
+Bolduc Correctional Facility,516 Cushing Road,4864
+Charleston Correctional Facility,1202 Dover Road,4422
+Downeast Correctional Facility,64 Base Road,4655
+Maine Correctional Center,17 Mallison Falls Road,4062
+Maine State Prison,807 Cushing Road,4864
+Southern Maine Re-entry Center,2 Layman Way,4002
+Maine Correctional Center,17 Mallison Falls Road,4062
+Baltimore City Correctional Center,901 Greenmount Avenue,21202
+Brockbridge Correctional Facility,7930 Brock Bridge Road,20794
+Baltimore Central Booking and Intake Center,300 E. Madison Street,21202
+Baltimore City Detention Center,401 E. Eager Street,21202
+Baltimore Pre-Release Unit,531 East Madison Street,21202
+Central Maryland Correctional Facility,7301 Buttercup Road,21784
+Chesapeake Detention Facility,401 East Madison Street,21202
+Patuxent Institution,P.O. Box 700,20794
+Eastern Correctional Institution,30420 Revells Neck Road,21890
+Eastern Correctional Institution Annex,30430 Revells Neck Road,21890
+Eastern Correctional Institution,30420 Revells Neck Road,21890
+Eastern Correctional Institution Annex,30430 Revells Neck Road,21890
+Eastern Pre-Release Unit,700 Flat Iron Square Road,21623
+Jessup Correctional Institution,Post Office Box 534,20794
+Maryland Correctional Institution - Hagerstown,18601 Roxbury Road,21746
+Maryland Correctional Institution Jessup,Post Office Box 549,20794
+Maryland Correctional Institution for Women,7943 Brockbridge Road,20794
+Maryland Correctional Training Center,18800 Roxbury Road,21746
+"Maryland Reception, Diagnostic and Classification Center",550 East Madison Street,21202
+Metropolitan Transition Center,954 Forrest Street,21202
+North Branch Correctional Institution,"14100 McMullen Highway, S.W.",21502
+Poplar Hill Pre-Release Unit,24090 Nanticoke Road,21856
+Roxbury Correctional Institution,18701 Roxbury Road,21746
+Southern Maryland Pre-Release Unit,14320 Oaks Road,20622
+Western Correctional Institution,"13800 McMullen Highway, S.W.",21502
+Bay State Correctional Center,P.O. Box 73,2056
+Boston Pre-Release,430 Canterbury St.,2131
+Bridgewater State Hospital,20 Administration Road,2324
+Lemuel Shattuck Hospital Correctional Unit,180 Morton Street,2130
+Massachusetts Alcohol and Substance Abuse Center,2 Administration Road,2324
+Massachusetts Treatment Center,30 Administration Road,2324
+MCI Cedar Junction,P.O. Box 100,2071
+MCI Concord,PO Box 9106,1742
+MCI Framingham,PO Box 9007,1701
+MCI Norfolk,PO Box 43,2056
+MCI Plymouth,PO Box 207,2366
+MCI Shirley,PO Box 1218,1464
+NCCI/Gardner,PO Box 466,1440
+Northeastern Correctional Center,PO Box 1069,1742
+Old Colony Correctional Center,1 Administration Road,2324
+Pondville Correctional Center,PO Box 146,2056
+South Middlesex Correctional Center,PO Box 850,1701
+Souza-Baranowski Correctional Center,PO Box 8000,1464
+Alger Correctional Facility,P.O. Box 600,49862
+Baraga Correctional Facility,13924 Wadaga Road,49908
+Bellamy Creek Correctional Facility,1727 West Bluewater Highway,48846
+Boyer Road Correctional Facility,10274 Boyer Road,48811
+Boyer Road Correctional Facility,10274 Boyer Road,48811
+Central Michigan Correctional Facility,320 N. Hubbard,48880
+Charles Egeler Reception & Guidance Center,3855 Cooper St.,49201
+Chippewa Correctional Facility,4269 W. M-80,49784
+Cooper Street Correctional Facility,3100 Cooper St.,49201
+Detroit Detention Center,17601 Mound Road,48212
+Detroit Reentry Center,17600 Ryan Road,48212
+Earnest C. Brooks Correctional Facility,2500 S. Sheridan Drive,49444
+G. Robert Cotton Correctional Facility,3500 N. Elm Road,49201
+Gus Harrison Correctional Facility,2727 East Beecher St.,49221
+Ionia Correctional Facility,1576 W. Bluewater Highway,48846
+Kinross Correctional Facility,16770 S. Watertower Drive,49788
+Lakeland Correctional Facility,141 First St.,49036
+Macomb Correctional Facility,34625 26 Mile Rd.,48048
+Marquette Branch Prison,1960 U.S. Hwy. 41 South,49855
+Michigan Reformatory,1342 W. Main,48846
+Muskegon Correctional Facility,2400 S. Sheridan Drive,49442
+Newberry Correctional Facility,13747 E. County Road 428,49868
+Oaks Correctional Facility,1500 Caberfae Highway,49660
+Ojibway Correctional Facility,N 5705 Ojibway Road,49947
+Parnall Correctional Facility,1780 E. Parnall,49201
+Pugsley Correctional Facility,7401 East Walton Road,49649
+Richard A. Handlon Correctional Facility,1728 Bluewater Highway,48846
+Saginaw Correctional Facility,9625 Pierce Rd.,48623
+Special Alternative Incarceration Facility,18901 Waterloo Rd.,48118
+St. Louis Correctional Facility,8585 N. Croswell Road,48880
+Thumb Correctional Facility,3225 John Conley Drive,48446
+West Shoreline Correctional Facility,2500 S. Sheridan Drive,49444
+Women's Huron Valley Correctional Facility,3201 Bemis Road,48197
+Woodland Center Correctional Facility,9036 E. M-36,48189
+Red Wing Correctional Facility,1079 Highway 292,55066
+Rush City Correctional Facility,7600 - 525th St.,55069
+Shakopee Correctional Facility,1010 West Sixth Avenue,55379
+St. Cloud Correctional Facility,2305 Minnesota Boulevard S.E.,56304
+Stillwater Correctional Facility,970 Pickett Street,55003
+Togo Correctional Facility,62741 Co Rd. 551,55723
+Willow River/Moose Lake Correctional Facility,1000 Lake Shore Drive,55767
+Bolivar County Correctional Facility,2792 Hwy 8 West,38732
+Carroll-Montgomery CountyRegional Correctional Facility,33714 MS Highway 35,39176
+Chickasaw County Regional Correctional Facility,120 Lancaster Circle,38851
+East Mississippi Correctional Facility,10641 Highway 80 East,39307
+George-Greene County Regional Correctional Facility,154 Industrial Park Rd.,39452
+Holmes-Humphreys County Regional Correctional Facility,23234 Hwy. 12 East,39095
+Issaquena County Correctional Facility,Post Office Box 220,39113
+Jefferson-Franklin County Correctional,P.O. Box 218,39069
+Kemper Neshoba County Regional Correctional Facility,374 Stennis Industrial Park Road,39328
+Leake County Correctional Facility,399 C. O. Brooks Street,39051
+Marion Walthall County Regional Correctional Facility,503 South Main Street,39429
+Marshall County Correctional Facility,Post Office Box 5188,38634
+Mississippi State Penitentiary,Post Office Box 1057,38738
+South Mississippi Correctional Institution,Post Office Box 1419,39451
+Stone County Correctional Facility,1420 Industrial Park Road,39577
+Walnut Grove Youth Correctional Facility,Post Office Box 389,39189
+Washington County Regional Correctional Facility,60 Stokes King Rd,38701
+Wilkinson County Correctional Center,Post Office Box 1889,39669
+Winston Choctaw County Regional Correctional Facility,P.O Drawer 1437,39339
+Yazoo County Correctional Facility,154 Roosevelt Hudson Drive,39194
+Algoa Correctional Center,8501 No More Victims Road,65101
+Boonville Correctional Center,1216 East Morgan Street,65233
+Chillicothe Correctional Center,3151 Litton Road,64601
+Crossroads Correctional Center,1115 East Pence Road,64429
+"Eastern Reception, Diagnostic and Correctional Center",2727 Highway K,63628
+Farmington Correctional Center,1012 West Columbia Street,63640
+Fulton Reception and Diagnostic Center,"P.O. Box 190, State Route O",65251
+Jefferson City Correctional Center,8200 No More Victims Road,65101
+Maryville Treatment Center,30227 US Highway 136,64468
+Missouri Eastern Correctional Center,18701 US Highway 66,63069
+Moberly Correctional Center,P.O. Box 7,65270
+Northeast Correctional Center,13698 Airport Road,63334
+Ozark Correctional Center,929 Honor Camp Lane,65652
+Potosi Correctional Center,11593 State Highway O,63660
+South Central Correctional Center,255 West Highway 32,65542
+Southeast Correctional Center,300 East Pedro Simmons Drive,63834
+Tipton Correctional Center,619 North Osage Avenue,65081
+Western Missouri Correctional Center,609 East Pence Road,64429
+"Western Reception, Diagnostic and Correctional Center",3401 Faraon,64506
+"Women's Eastern Reception, Diagnostic and Correctional Center",1101 East Highway 54,63382
+Alpha House Men's Pre-release Center,3109 1st Avenue North,59101
+Alpha House Men's Pre-release Center,3109 1st Avenue North,59101
+Cascade County Regional Prison,3800 Ulm North Frontage Road,59404
+Crossroads Correctional Center,50 Crossroads Drive,59474
+Dawson County Correctional Facility,440 Colorado Blvd,59330
+Montana State Prison,400 Conley Lake Road,59722
+Montana Women's Prison,701 S. 27th St.,59101
+Pine Hills Youth Correctional Facility,4 North Haynes Ave.,59301
+Riverside Youth Correctional Facility,P.O. BOX 88,59632
+Community Corrections Center Lincoln,P.O. Box 2200,68542
+Community Corrections Center Omaha,2320 Avenue J,68110
+Diagnostic and Evaluation Center,PO Box 22800,68542
+Lincoln Correctional Center,P.O. Box 22800,68522
+Nebraska Correctional Center for Women,1107 Recharge Rd,68467
+Nebraska Correctional Youth Facility,2610 N 20th St East,68110
+Nebraska State Penitentiary,P.O. Box 2500,68542
+Omaha Correctional Center,P.O. Box 11099,68110
+Tecumseh State Correctional Institution,PO Box 900,68450
+Work Ethic Camp,2309 N. Hwy 83,69001
+Ely State Prison,P.O. Box 1989,89301
+Florence McClure Women's Correctional Center,4370 Smiley Road,89115
+High Desert State Prison,P.O. Box 650,89070
+Lovelock Correctional Center,1200 Prison Rd.,89419
+Northern Nevada Correctional Center,P.O. Box 7000,89702
+Southern Desert Correctional Center,P.O. Box 208,89070
+Warm Springs Correctional Center,P.O. Box 7007,89702
+State Prison for Men,P.O.Box 14,3302
+New Hampshire State Prison for Women,317 Mast Road,3045
+Northern New Hampshire Correctional Facility,138 East Milan Road,3570
+Adult Diagnostic and Treatment Center,PO Box 190,7001
+Atlantic County Justice Facility,5060 Atlantic Ave.,8330
+East Jersey State Prison,Lock Bag R,7065
+Otero County Prison Facility,10 McGregor Range Road,88081
+Western New Mexico Correctional Facility,P.O. Drawer 250,87020
+Albemarle Correctional Institution,P.O. Box 460,28009
+Alexander Correctional Institution,633 Old Landfill Road,28681
+Avery Mitchell Correctional Institution,600 Amity Park Road,28777
+Bertie Correctional Institution,P.O. Box 129,27983
+Brown Creek Correctional Institution,P.O. Box 310,28135
+Caldwell Correctional Center,480 Pleasant Hill Road,28645
+Caledonia Correctional Institution,Box 137,27887
+Carteret Correctional Center,P.O. Box 220,28570
+Caswell Correctional Center,Box 217,27379
+Catawba Correctional Center,1347 Prison Camp Road,28658
+Central Prison,1300 Western Blvd.,27606
+Columbus Correctional Institution,1255 Prison Camp Road,28472
+Craggy Correctional Center,Box 8909,28814
+Craven Correctional Institution,P.O. Box 839,28586
+Dan River Prison Work Farm,981 Murray Road,27212
+Davidson Correctional Center,P.O. Box 1977,27293
+Eastern Correctional Institution,Box 215,28554
+Foothills Correctional Institution,5150 Western Avenue,28655
+Forsyth Correctional Center,307 Craft Drive,27105
+Franklin Correctional Center,Box 155,27508
+Gaston Correctional Center,520 Justice Court,28034
+Greene Correctional Institution,P.O. Box 39,28554
+Harnett Correctional Institution,Box 1569,27546
+Hoke Correctional Institution,243 Old Hwy 211,28376
+Hyde Correctional Institution,P.O. Box 278,27885
+Johnston Correctional Institution,2465 US 70 West,27577
+Lanesboro Correctional Institution,PO Box 280,28135
+Lumberton Correctional Institution,P.O. Box 1649,28359
+Marion Correctional Institution,Box 2405,28752
+Maury Correctional Institution,P.O. Box 506,28554
+Morrison Correctional Institution,Box 169,28347
+Mountain View Correctional Institution,545 Amity Park Road,28777
+Nash Correctional Institution,PO Box 600,27856
+Neuse Correctional Institution,P.O. Box 2087,27533
+New Hanover Correctional Center,Box 240,28402
+North Carolina Correctional Institution for Women,4287 Mail Service Center,27699
+Odom Correctional Institution,Post Office Box 36,27845
+Orange Correctional Center,PO Box 1149,27278
+Pamlico Correctional Institution,601 North Third Street,28515
+Pasquotank Correctional Institution,527 Commerce Drive,27906
+Pender Correctional Institution,Box 1058,28425
+Piedmont Correctional Institution,1245 Camp Road,28147
+Polk Correctional Institution,Box 2500,27509
+Randolph Correctional Center,Box 4128,27204
+Rutherford Correctional Center,Box 127,28160
+Sampson Correctional Institution,Box 1109,28328
+Sanford Correctional Center,Box 2490,27330
+Scotland Correctional Institution,PO Box 1808,28353
+Southern Correctional Institution,272 Glen Road,27371
+Swannanoa Correctional Center for Women,P.O. Box 609,28711
+Tabor Correctional Institution,P.O. Box 730,28463
+Tyrrell Prison Work Farm,P.O. Box 840,27925
+Wake Correctional Center,1000 Rock Quarry Road,27610
+Warren Correctional Institution,Box 728,27563
+Wilkes Correctional Center,404 Statesville Road,28659
+Dakota Women's Correctional and Rehabilitation Center,440 McKenzie Street,58647
+James River Correctional Center,2521 Circle Drive,58401
+Missouri River Correctional Center,P.O. Box 5521,58506
+North Dakota State Penitentiary,PO Box 5521,58506
+North Dakota Youth Correctional Center,701 16th Ave SW,58554
+Allen Oakwood Correctional Institution,P.O. Box 4501,45801
+Belmont Correctional Institution,P.O. Box 540,43950
+Chillicothe Correctional Institution,P. O. Box 5500,45601
+Correctional Reception Center,P.O. Box 300,43146
+Dayton Correctional Institution,P.O. Box 17399,45417
+Franklin Medical Center,P.O. Box 23658,43223
+Grafton Correctional Institution,2500 South Avon Belden Road,44044
+Lake Erie Correctional Institution,P.O. Box 8000,44030
+Lebanon Correctional Institution,P.O. Box 56,45036
+London Correctional Institution,P.O. Box 69,43140
+Lorain Correctional Institution,2075 South Avon-Belden Road,44044
+Madison Correctional Institution,P.O. Box 740,43140
+Mansfield Correctional Institution,P.O. Box 788,44901
+Marion Correctional Institution,P.O. Box 57,43302
+Noble Correctional Institution,15708 McConnelsville Road,43724
+North Central Correctional Complex,P.O. Box 1812,43302
+Northeast Reintegration Center,2675 East 30th Street,44115
+Ohio Reformatory for Women,1479 Collins Avenue,43040
+Ohio State Penitentiary,878 Coitsville-Hubbard Road,44505
+Pickaway Correctional Institution,P.O. Box 209,43146
+Richland Correctional Institution,P.O. Box 8107,44905
+Ross Correctional Institution,P.O. Box 7010,45601
+Lancaster Unit,5900 B.I.S. Road,43130
+Southern Ohio Correctional Facility,P.O. Box 45699,45699
+Toledo Correctional Institution,P.O. Box 80033,43608
+Trumbull Correctional Institution,P.O. Box 901,44430
+TCI Camp,P.O. Box 640,44430
+Warren Correctional Institution,P.O. Box 120,45036
+"Inmate Name, ID Number (housing if known)",1856 E. Flynn Street,73717
+Cimarron Correctional Facility,3200 SouthKings Highway,74023
+Clara Waters Community Corrections Center,9901 N I-35 Service Road,73131
+Davis Correctional Facility,6888 East 133rd Road,74848
+Dick Conner Correctional Center,P.O. Box 220,74035
+Dr. Eddie Warrior Correctional Center,P.O. Box 315,74463
+Enid Community Corrections Center,2020 E. Maine Avenue,73701
+Howard McLeod Correctional Center,1970 E. Whippoorwill Lane,74525
+Jackie Brannon Correctional Center,P.O. Box 1999,74502
+James Crabtree Correctional Center,216 North Murray Street,73741
+Jess Dunn Correctional Center,P.O. Box 316,74463
+Jim E. Hamilton Correctional Center,53468 Mineral Springs Road,74939
+John H. Lilley Correctional Center,"Rt. 1, Box 407971",74829
+Joseph Harp Correctional Center,P.O. Box 548,73051
+Kate Barnard Community Corrections Center,3300 Martin Luther King Avenue,73111
+Lawton Correctional Facility,8607 SE Flower Mound Road,73501
+Lexington Assessment & Reception Center,P.O. Box 260,73051
+Mabel Bassett Correctional Center,29501 Kickapoo Road,74851
+Mack Alford Correctional Center,P.O. Box 220,74569
+North Fork Correctional Facility,1605 East Main,73662
+Northeast Oklahoma Correctional Center,442586 E. 250 Road,74301
+Oklahoma City Community Corrections Center,315 West I-44 Service Road,73118
+Oklahoma State Penitentiary,P.O. Box 97,74502
+Oklahoma State Reformatory,P.O. Box 514,73547
+Union City Community Corrections Center,P.O. Box 129,73090
+William Key Correctional Center,P.O. Box 61,73841
+Coffee Creek Correctional Facility,"24499 SW Grahams Ferry Road, Suite U",97070
+Columbia River Correctional Institution,9111 NE Sunderland Avenue,97211
+Deer Ridge Correctional Institution,3920 East Ashwood Road,97741
+Eastern Oregon Correctional Institution,2500 Westgate,97801
+Mill Creek Correctional Facility,2605 State Street,97310
+Oregon State Correctional Institution,3405 Deer Park Drive SE,97310
+Oregon State Penitentiary,2605 State Street,97310
+Powder River Correctional Facility,3600 13th Street,97814
+Santiam Correctional Institution,4005 Aumsville Hwy SE,97317
+Shutter Creek Correctional Institution,95200 Shutters Landing Lane,97459
+Snake River Correctional Institution,777 Stanton Blvd,97914
+South Fork Forest Camp,48300 Wilson River Hwy,97141
+Two Rivers Correctional Institution,82911 Beach Access Rd,97882
+Warner Creek Correctional Facility,P.O. Box 1500,97630
+SCI Albion,10745 Route 18,16475
+Benner Township State Correctional Institution,301 Institution Drive,16823
+Cambridge Springs State Correctional Institution,451 Fullerton Avenue,16043
+Camp Hill State Correctional Institution,P.O. Box 200,17001
+SCIChester,500 E. Fourth Street,19013
+SCI Coal Township,1 Kelley Drive,17866
+Dallas State Correctional Institution,"Follies Road, Drawer K",18612
+SCIFayette,P.O. Box 9999,15450
+SCIForest,P.O. Box 945,16239
+SCI Frackville,1111 Altamont Boulevard,17931
+SCIGraterford,P.O. Box 244,19426
+SCIGreene,175 Progress Drive,15370
+SCIHoutzdale,P.O. Box 1000,16698
+SCIHuntington,1100 Pike Street,16654
+SCILaurel Highlands,P.O. Box 631,15501
+Mahanoy State Correctional Institution,301 Morea Road,17932
+SCI Mercer,801 Butler Pike,16137
+SCI Muncy,P.O. Box 180,17756
+SCIPine Grove,191 Fyock Road,15701
+SCIPittsburgh,P.O. Box 99991,15233
+Quehanna Motivational Boot Camp,4510 Quehanna Highway,16845
+SCIRetreat,660 State Route 11,18621
+SCI Rockview,Box A,16823
+SCISmithfield,P.O. Box 999,16652
+SCI Somerset,1600 Walters Mill Road,15510
+SCIWaymart,P.O. Box 256,18472
+John J. Moran Medium Security Facility,P.O. Box 8274,2920
+Maximum Security,P.O. Box 8273,2920
+Minimum Security,P.O. Box 8212,2920
+Allendale Correctional Institution,P.O. Box 1151,29827
+Broad River Correctional Institution,4460 Broad River Road,29210
+Catawba Pre-Release Center,1030 Milling Road,29730
+Evans Correctional Institution,P.O. Box 2951202,29512
+Goodman Correctional Institution,4556 Broad River Road,29210
+Graham (Camille Griffin) Correctional Institution,4450 Broad River Road,29210
+Kershaw Correctional Institution,4848 Gold Mine Highway,29067
+Kirkland Reception and Evaluation Center,4344 Broad River Road,29210
+Leath Correctional Institution,2809 Airport Road,29649
+Lee Correctional Institution,990 Wisacky Highway,29010
+Lieber Correctional Institution,P.O. Box 205,29472
+Livesay Correctional Institution,P.O. Box 580,29378
+Lower Savannah Pre-Release Center,361 Wire Road,29801
+MacDougall Correctional Institution,1516 Old Gilliard Road,29472
+Manning Correctional Institution,502 Beckman Road,29203
+McCormick Correctional Institution,386 Redemption Way,29899
+Palmer Pre-Release Center,2012 Pisgah Road,29501
+Perry Correctional Institution,430 Oaklawn Road,29669
+RidgelandCorrectional Institution,P.O. Box 2039,29936
+Trenton Correctional Institution,84 Greenhouse Road,29847
+Turbeville Correctional Institution,P.O. Box 252,29162
+Tyger River Correctional Institution,200 Prison Road,29335
+Walden Correctional Institution,4340 Broad River Road,29210
+Wateree River Correctional Institution,P.O. Box 189,29128
+Aurora Plains Academy,1400 East 10th Street,57368
+Jameson Annex,P.O. Box 5911,57117
+Mike Durfee State Prison,1412 Wood Street,57062
+Patrick Henry Brady Academy,12279 Brady Drive,57730
+QUEST,25298 Badger Clark Road,57730
+Rapid City Minimum Unit,2725 Creek Drive,57703
+South Dakota State Penitentiary,P.O. Box 5911,57117
+South Dakota Women's Prison,c/o 500 E. Capital Ave.,57501
+STAR Academy,12279 Brady Drive,57730
+Yankton Minimum Unit,178 Mickelson Drive,57078
+Youth Challenge Center,12279 Brady Drive,57730
+Bledsoe County Correctional Complex,1045 Horsehead Road,37367
+Hardeman County Correctional Facility,P.O. Box 549,38075
+Lois M. DeBerry Special Needs Facility,7575 Cockrill Bend Boulevard,37209
+Mark H. Luttrell Correctional Center,6000 State Road,38134
+Morgan County Correctional Complex,P.O. Box 2000,37887
+Northeast Correctional Complex and Annex,P.O. Box 5000,37683
+Northwest Correctional Complex,960 State Route 212,38079
+Riverbend Maximum Security Institution,7475 Cockrill Bend Boulevard,37209
+South Central Correctional Facility,P.O. Box 279,38425
+Tennessee Prison for Women,3881 Stewarts Lane,37218
+Turney Center Industrial Main Site,1499 R.W. Moore Memorial Highway,37140
+Turney Center Industrial Annex,P.O. Box 182,38425
+West Tennessee State Penitentiary,P.O. Box 1150,38041
+Whiteville Correctional Facility,P.O. Box 679,38075
+Allred Unit,2101 FM 369 North,76367
+Bartlett State Jail,1018 Arnold Drive,76511
+Beto Unit,1391 FM 3328,75880
+Boyd Unit,200 Spur 113,75860
+James Bradshaw State Jail,P.O. Box 9000,75653
+Bridgeport Correctional Center,4000 North Tenth Street,76426
+Briscoe Unit,1459 West Highway 85,78017
+Byrd Unit,21 FM 247,77320
+Clemens Unit,11034 Hwy 36,77422
+Clements Unit,9601 Spur 591,79107
+Cleveland Correctional Center,P.O. Box 1678,77328
+Coffield Unit,2661 FM 2054,75884
+Cole Unit,3801 Silo Road,75418
+Connally Unit,899 FM 632,78119
+Cotulla Unit,610 FM 624,78014
+Crain Unit,1401 State School Road,76599
+Dalhart Unit,11950 FM 998,79022
+Daniel Unit,938 South FM 1673,79549
+Darrington Unit,59 Darrington Road,77583
+Diboll Correctional Center,1604 South First Street,75941
+Dominguez State Jail,6535 Cagnon Road,78252
+Duncan Unit,1502 South First Street,75941
+East Texas Treatment Facility,900 Industrial Drive,75652
+Eastham Unit,2665 Prison Road #1,75851
+Ellis Unit,1697 FM 980,77343
+Estelle Unit,264 FM 3478,77320
+Estes Unit,1100 Hwy 1807,76084
+Ferguson Unit,12120 Savage Drive,75852
+Formby State Jail,998 County Road AA,79072
+Fort Stockton Transfer Facility,1536 IH-10 East,79735
+Garza East,4304 Highway 202,78102
+Garza West Transfer Facility,4250 Highway 202,78102
+Larry Gist State Jail,3295 FM 3514,77705
+Glossbrenner Unit,5100 South FM 1329,78384
+Goodman Transfer Facility,349 Private Road 8430,75951
+Goree Unit,7405 Hwy 75 South,77344
+Gurney Transfer Facility,1385 FM 3328,75803
+Halbert Unit,800 Ellen Halbert Drive,78611
+Hamilton Unit,200 Lee Morrison Lane,77807
+Havins Unit,500 FM 45 East,76801
+Henley State Jail,7581 Hwy 321,77535
+Hightower Unit,902 FM 686,77535
+Hilltop Unit,1500 State School Road,76598
+Hobby Unit,742 FM 712,76661
+Hodge Unit,P.O. Box 999,75785
+Holliday Transfer Facility,295 IH-45 North,77320
+Hospital Galveston,"P.O. Box 48,Substation #1",77555
+Hughes Unit,Route 2 Box 4400,76597
+Huntsville Unit,815 12th Street,77348
+Hutchins State Jail,1500 East Langdon Road,75241
+Jester I Unit,1 Jester Road,77406
+Jester I Unit,1 Jester Road,77406
+Jester I Unit,1 Jester Road,77406
+Jester I Unit,1 Jester Road,77406
+Jester I Unit,1 Jester Road,77406
+Jester I Unit,1 Jester Road,77406
+Johnston Unit,703 Airport Road,75494
+Jordan Unit,1992 Helton Road,79065
+Jordan Unit,1992 Helton Road,79065
+Kegans State Jail,707 Top Street,77002
+Kyle Correctional Center,23001 Interstate 35,78640
+LeBlanc Unit,3695 FM 3514,77705
+Lewis Unit,777 FM 3497,75990
+Lindsey State Jail,1620 FM 3344,76458
+Lockhart Correctional Facility,1400 Industrial Boulevard,78644
+Lopez State Jail,1203 El Cibolo Road,78542
+Luther Unit,1800 Luther Drive,77868
+Lychner State Jail,2350 Atascocita Road,77396
+Lynaugh Unit,1098 South Highway 2037,79735
+Marlin Transfer Facility,2893 State Hwy 6,76661
+McConnell Unit,3001 South Emily Drive,78102
+Michael Unit,2664 Farm to Market Road 2054,75886
+Middleton Transfer Facility,13055 Farm to Market Road 3522,79601
+Montford Unit,8602 Peach Street,79404
+Billy Moore Correctional Center,8500 North FM 3053,75684
+Choice Moore Transfer Facility,1700 North FM 87,75418
+Mountain View Unit,2305 Ransom Road,76528
+Murray Unit,1916 North Highway 36 Bypass,76596
+Neal Unit,9055 Spur 591,79107
+Joe Ney State Jail,114 Private Road 4303,78861
+Wallace Pack Unit,2400 Wallace Pack Road,77868
+Lucile Plane State Jail,904 FM 686,77535
+Polunsky Unit,3872 FM 350 South,77351
+Powledge Unit,1400 FM 3452,75803
+Ramsey Unit,1100 FM 655,77583
+Roach Unit,15845 FM 164,79201
+Robertson Unit,12071 FM 3522,79601
+Rudd Transfer Facility,2004 Lamesa Highway,79316
+Sanchez State Jail,3901 State Jail Road,79938
+San Saba Transfer Facility,206 South Wallace Creek Road,76877
+Sayle Unit,4176 FM 1800,76424
+Scott Unit,6999 Retrieve,77515
+Segovia Unit,1201 E. El Cibolo Road,78542
+Skyview Unit,379 FM 2972 West,75785
+Smith Unit,1313 County Road 19,79331
+Stevenson Unit,1525 FM 766,77954
+Stiles Unit,3060 FM 3514,77705
+Stringfellow Unit,1200 FM 655,77583
+Telford Unit,3899 Highway 98,75570
+Terrell Unit,1300 FM 655,77583
+Torres Unit,125 Private Road 4303,78861
+Travis County State Jail,8101 FM 969,78724
+Tulia Transfer Facility,4000 Highway 86 West,79088
+Vance Unit,2 Jester Road,77406
+Wallace Unit,1675 South FM 3525,79512
+Ware Transfer Facility,1681 South FM 3525,79512
+Wheeler State Jail,986 County Road AA,79072
+Willacy County State Jail,1695 South Buffalo Drive,78580
+Woodman State Jail,1210 Coryell City Road,76528
+Young Medical Facility,5509 Attwater Ave.,77539
+Utah State Prison,P.O. Box 250,84020
+CUCF,P.O. Box 550,84634
+Chittenden Regional Correctional Facility,7 Farrell Street,5403
+Marble Valley Regional Correctional Facility,167 State Street,5701
+Northern State Correctional Facility,2559 Glen Road,5855
+Northeast Correctional Complex,1266-1270 US Route 5,5819
+Northwest State Correctional Facility,3649 Lower Newton Road,5488
+Southeast State Correctional Facility,546 State Farm Road,5089
+Southern State Correctional Facility,700 Charlestown Road,5156
+Augusta Correctional Center,1821 Estaline Valley Road,24430
+Baskerville Correctional Center,4150 Hayes Mill Road,23915
+Bland Correctional Center,256 Bland Farm Road,24315
+Brunswick Work Center,P.O. Box 207C,23868
+Buckingham Correctional Center,P.O. Box 430,23936
+Caroline Correctional Unit #2,31285 Camp Road,23069
+Central Virginia Correctional Unit,6900 Courthouse Road,23832
+Coffeewood Correctional Center,P. O. Box 500,22729
+Cold Springs Correctional Unit,221 Spitler Circle,24440
+Deep Meadow Correctional Center,3500 Woods Way,23160
+Deerfield Correctional Center,21360 Deerfield Drive,23829
+Dillwyn Correctional Center,P.O. Box 670,23936
+Fluvanna Correctional Center for Women,144 Prison Lane,22974
+Green Rock Correctional Center,475 Green Rock Lane,24531
+Greensville Correctional Center,901 Corrections Way,23870
+Halifax Correctional Unit,Box 1789,24558
+Haynesville Correctional Center,P.O. Box 129,22472
+Haynesville Correctional Unit,P.O. Box 39,22472
+Indian Creek Correctional Center,P.O. Box 16481,23328
+James River Work Center,1954 State Farm Road,23160
+Keen Mountain Correctional Center,P.O. Box 860,24631
+Lawrenceville Correctional Center,1607 Planters Road,23868
+Lunenburg Correctional Center,P.O. Box 1424,23974
+Marion Treatment Center,110 Wright Street,24354
+Medical College of Virginia,401 N. 12th Street,23298
+Nottoway Correctional Center,P.O. Box 488,23922
+Patrick Henry Correctional Unit,P.O. Box 1090,24148
+Pocahontas State Correctional Center,P.O. Box 518,24635
+Powhatan Reception Center,3600 Woods Way,23160
+Red Onion State Prison,P.O. Box 970,24279
+River North Correctional Center,329 Dell Brook Lane,24348
+Rustburg Correctional Unit,479 Camp Nine Road,24588
+St. Brides Correctional Center,P.O. Box 16482,23328
+Sussex I State Prison,24414 Musselwhite Drive,23891
+Sussex II State Prison,24427 Musselwhite Drive,23891
+Virginia Correctional Center for Women,P.O. Box 1,23063
+Wallens Ridge State Prison,P.O. Box 759,24219
+Wise Correctional Unit,P.O. Box 1198,24230
+Airway Heights Corrections Center,P.O. Box 1899,99001
+Cedar Creek Corrections Center,P.O. Box 37,98556
+Clallam Bay Corrections Center,1830 Eagle Crest Way,98326
+Coyote Ridge Corrections Center,P.O. Box 769,99326
+Larch Corrections Center,15314 NE Dole Valley Road,98675
+Mission Creek Corrections Center for Women,3420 NE Sand Hill Road,98528
+Monroe Correctional Complex,P.O. Box 777,98272
+Olympic Corrections Center,11235 Hoh Mainline,98331
+Stafford Creek Corrections Center,191 Constantine Way,98520
+Washington Corrections Center,P.O. Box 900,98584
+Washington Corrections Center for Women,9601 Bujacich Rd. NW,98332
+Washington State Penitentiary,1313 North 13th Avenue,99362
+Anthony Correctional Center,Box N-1,24986
+Beckley Correctional Center,111 S. Eisenhower Drive,25801
+Charleston Correctional Center,1356 Hansford St.,25301
+Denmar Correctional Center,4319 Denmar Road,24946
+Huttonsville Correctional Center,P.O. Box 1,26273
+Lakin Correctional Center,11264 Ohio River Road,25287
+Northern Correctional Facility,112 Northern Regional Correctional Drive,26041
+Ohio County Correctional Center,1501 Eoff Street,26003
+Parkersburg Correctional Center,225 Holiday Hills Drive,26104
+Pruntytown Correctional Center,P.O. Box 159,26354
+Salem Correctional Center,7 Industrial Blvd.,26426
+Chippewa Valley Correctional Treatment Facility,2909 E. Park Ave.,54729
+2925 Columbia Drive,P.O. Box 900,53901
+Dodge Correctional Institution,P.O. Box 700,53963
+"Inmate Name, DOC Number (Housing Unit)",P.O. Box 200,53933
+Green Bay Correctional Institution,P.O. Box 19033,54307
+Kettle Moraine Correctional Institution,P.O. Box 282,53073
+Milwaukee Secure Detention Facility,P.O. Box 05911,53205
+New Lisbon Correctional Institution,P.O. Box 4000,53950
+Oakhill Correctional Institution,P.O. Box 140,53575
+Oshkosh Correctional Institution,P.O. Box 3310,54903
+"Inmate Name, DOC Number",P.O. Box 9900,53821
+"Inmate name, DOC Number, Housing Unit",P.O. Box 900,53177
+(Housing Unit),P.O. Box 2500 ,53404
+Redgranite Correctional Institution,P.O. Box 925,54970
+"Inmate's Name, DOC Number",100 Corrections Drive,54768
+"Inmate's name, DOC Number, Housing Unit",P.O. Box 903,53177
+Taycheedah Correctional Institution,P.O. Box 3100,54936
+Waupun Correctional Institution,P.O. Box 351,53963
+Wisconsin Secure Program Facility,P.O. Box 9900,53805
+Anna M. Kross Center,18-18 Hazen Street,11370
+Bellevue Hospital Prison Ward,462 1st Avenue,10016
+Brooklyn Detention Complex,275 Atlantic Avenue,11201
+Eric M. Taylor Center,10-10 Hazen Street,11370
+Elmhurst Hospital Prison Ward,79-01 Broadway,11370
+George Motchan Detention Center,15-15 Hazen Street,11370
+George R. Vierno Center,09-09 Hazen Street,11370
+Manhattan Detention Complex,125 White Street,10013
+North Infirmary Command,15-00 Hazen Street,11370
+Otis Bantum Correctional Center,16-00 Hazen Street,11370
+Queens Detention Complex,126-01 82nd Street,11415
+Robert N. Davoren Complex,11-11 Hazen Street,11370
+Rose M. Singer Center,19-19 Hazen Street,11370
+Vernon C. Bain Center,1 Halleck Street,10474
+West Facility,16-06 Hazen Street,11370
+Queensboro Correctional Facility,47-04 Van Dam Street,11101
+Chittenden Regional Correctional Facility,7 Farrell Street,05403
+Chittenden Regional Correctional Facility,7 Farrell Street,05403
+Chittenden Regional Correctional Facility,7 Farrell Street,05403
