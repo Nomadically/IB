@@ -234,6 +234,24 @@ def newentry(arg1, **kwargs):
 
 print("check 1")
 
+newentry('Limon Correctional Facility',
+         street='49030 State Hwy 71 South',
+         street2='',
+         address='Limon, CO 80826',
+         zip='80826',
+         website='https://cdoc.colorado.gov/facilities/limon-correctional-facility')
+
+
+
+# newentry('Wyoming State Penitentiary ',
+#          street='P.O. Box 400',
+#          street2='',
+#          address='Rawlins,WY 82301',
+#          zip='82301',
+#          website='https://www.prisonpro.com/content/wyoming-state-penitentiary')
+
+
+
 #01/14/22:
 # newentry('Northeast Ohio CC',
 #          street='2240 Hubbard Road',

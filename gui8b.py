@@ -255,17 +255,18 @@ def fieldentry2(facility, state):
     for row in csv_reader:
         if facility in row['name'] and state in row['address']: # >>>>>>>>>>>>>>>>> need to update this logic, add 2nd check
             n = row['name']         # like matching state as well as facility !! <<<<--- 09/10/21
-            str = row['street']
+            strt = row['street']
             if row['street2'] is not None:
-                str2 = row['street2'], #need to add this also, 12/01/21, done on 12/09/21
+                strt2 = row['street2'], #need to add this also, 12/01/21, done on 12/09/21
             zpp = row['zip']
             break
     f.close
     print(row)
     if row['street2'] is not None and len(row['street2']) > 1:
-        results = [n.strip(), str.strip(), str2.strip(), zpp.strip()] #add str2 to this array <<< 12/01/21, then continue tracing where else code needs to be updated
+        # 01/28/22: fix the below, the str casting of str2, looks like a tuple inside mailware
+        results = [n.strip(), strt.strip(), str(strt2).strip(), zpp.strip()] #add str2 to this array <<< 12/01/21, then continue tracing where else code needs to be updated
     else:
-        results = [n.strip(), str.strip(), zpp.strip()]
+        results = [n.strip(), strt.strip(), zpp.strip()]
     return results
 
 # finish here!!!
@@ -604,7 +605,7 @@ xyz = sg.Button('Need to create or update facility info?')
 search = sg.Button('Check Info Online')
 updateinfo = sg.Button('Update Address in Mailware')
 newfac = sg.Button('Add New Facility to CSV - Admin Only')
-find = sg.Button('Check Inmate Name in Mailware')
+find = sg.Button('Find Inmate in JPay')
 restart = sg.Button('Restart Program')
 
 
@@ -656,6 +657,11 @@ while True:
         # from here, take values entered into name first and last, then close cust find window (via escape)
         #my_popup() # <<< change here
         #continue
+    elif event == 'Find Inmate in JPay':
+        #url_jpay = 'https://www.google.com/search?q=' + values['mainproject'] + ' inmate locator'
+        url_jpay = 'https://www.jpay.com/SearchResult.aspx?searchText='+values['inm']+'&searchState='+values['mainproject']+'&returnUrl=InmateInfo.aspx'
+        webbrowser.open(url_jpay, new=0, autoraise=True)
+
     elif event == 'Check Inmate Name in Mailware':
         if values['fn'] == '' or values['ln'] == '':
             sg.popup("Please input first and last name.", title="Error")
@@ -699,6 +705,10 @@ while True:
         window['subproject'].update('')
         keyboard.send('tab')
     if event == 'Check Info Online':
+        url = 'https://www.google.com/search?q=' + values['mainproject'] + ' inmate locator'
+        vinelinks = ['LA', 'MA', 'AK']
+        if (values['mainproject'] in vinelinks):
+            url = 'https://www.google.com/search?q=' + values['mainproject'] + ' vinelink inmate'
         if values['inm'] == '' or values['mainproject'] == '':
             sg.popup("Please enter inmate number and state to search that DOC.", title="Error")
             #window['fn'].update('')
@@ -714,10 +724,11 @@ while True:
                 str_inm_num = str((values['inm']).strip())
                 ar_zerofilled = str_inm_num.zfill(6)
                 pyperclip.copy(ar_zerofilled)
+
             else:
                 pyperclip.copy(str((values['inm']).upper()).strip())
-            url = 'https://www.google.com/search?q='+values['mainproject']+' inmate locator'
-            webbrowser.open(url, new=0, autoraise=True)
+            # original location of url value, 02/07/22
+        webbrowser.open(url, new=0, autoraise=True)
     if event == 'Update Address in Mailware':
         #mailwareupdate(fieldentry(values['subproject']))
         mailwareupdate(fieldentry2(values['subproject'], values['mainproject']))
