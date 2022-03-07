@@ -234,12 +234,51 @@ def newentry(arg1, **kwargs):
 
 print("check 1")
 
-newentry('Limon Correctional Facility',
-         street='49030 State Hwy 71 South',
-         street2='',
-         address='Limon, CO 80826',
-         zip='80826',
-         website='https://cdoc.colorado.gov/facilities/limon-correctional-facility')
+
+# newentry('Plane State Jail',
+#          street='904 FM 686',
+#          street2='',
+#          address='Dayton, TX 77535',
+#          zip='77535',
+#          website='https://www.tdcj.texas.gov/unit_directory/unit_information.html')
+
+
+
+
+# newentry('Edna Mahan CF for Women',
+#          street='P.O. Box 4004',
+#          street2='',
+#          address='Clinton, NJ 08809',
+#          zip='08809',
+#          website='https://www.prisonpro.com/content/edna-mahan-correctional-facility-women')
+
+# newentry('Southern State Correctional Facility',
+#          street='4295 Route 47',
+#          street2='',
+#          address='Delmont, NJ 08314',
+#          zip='08314',
+#          website='https://www.prisonpro.com/content/southern-state-correctional-facility')
+
+
+
+
+# newentry('Marcy Correctional Facility',
+#          street='P.O. Box 3600',
+#          street2='',
+#          address='Marcy, NY 13403-3600',
+#          zip='13403',
+#          website='https://doccs.ny.gov/location/marcy-correctional-facility')
+
+
+
+
+
+# newentry('Limon Correctional Facility',
+#          street='49030 State Hwy 71 South',
+#          street2='',
+#          address='Limon, CO 80826',
+#          zip='80826',
+#          website='https://cdoc.colorado.gov/facilities/limon-correctional-facility')
 
 
 

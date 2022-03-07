@@ -40,14 +40,18 @@ for window in ahk.windows():
     print(window.title)  # this will list names of open windows
     print("after this:")
     #print(window.class_name)  # this will list names of open class names
-    if b'Inmate Account Creation' in window.title:
-        ibprog = ahk.find_window(title=window.title)
-    if b'Mailware' in window.title:
-        mailware = ahk.find_window(title=window.title)
-    if b'Notepad' in window.title:
-        notepad = ahk.find_window(title=window.title)
-    if b'Search for Customer' == window.title:
-        custfind = ahk.find_window(title=window.title)
+    # if b'Inmate Account Creation' in window.title:
+    #     ibprog = ahk.find_window(title=window.title)
+    # if b'Mailware' in window.title:
+    #     mailware = ahk.find_window(title=window.title)
+    # if b'Notepad' in window.title:
+    #     notepad = ahk.find_window(title=window.title)
+    if b'Print' in window.title:
+        channergyprint = ahk.find_window(title=window.title)
+        channergyprint.close()
+        keyboard.send('alt+r, enter')
+    # if b'Search for Customer' == window.title:
+    #     custfind = ahk.find_window(title=window.title)
         #custfind.close()
     # if b'TMessageForm' in window.title:
     #     popupclose = ahk.find_window(title=window.title)
@@ -74,23 +78,23 @@ for window in ahk.windows():
 
 
 # when running find_inmate, add continue after its called in while loop
-def find_inmate(fn, ln, inm):
-    try:
-        mailware.activate()
-    except NameError:
-        sg.popup('Mailware not active, now starting program - please wait.')
-        subprocess.call([r"C:\Program Files (x86)\Mailware 2014\Mailware.exe"])
-    try:
-        custfind.activate()
-    except NameError:
-        keyboard.send('f4')
-    keyboard.send('alt+f')  # this puts cursor at first name in mailware
-    keyboard.write(fn.title())
-    keyboard.send('tab')
-    keyboard.write(ln.title())
-    keyboard.send('enter')
-    keyboard.send('esc')
-    return fn, ln, inm
+# def find_inmate(fn, ln, inm):
+#     try:
+#         mailware.activate()
+#     except NameError:
+#         sg.popup('Mailware not active, now starting program - please wait.')
+#         subprocess.call([r"C:\Program Files (x86)\Mailware 2014\Mailware.exe"])
+#     try:
+#         custfind.activate()
+#     except NameError:
+#         keyboard.send('f4')
+#     keyboard.send('alt+f')  # this puts cursor at first name in mailware
+#     keyboard.write(fn.title())
+#     keyboard.send('tab')
+#     keyboard.write(ln.title())
+#     keyboard.send('enter')
+#     keyboard.send('esc')
+#     return fn, ln, inm
     # after this, need to prompt user if inmate found or not - "No, not found, create account" and "Yes, found"
 
     # keyboard.send('ctrl+a')
@@ -266,6 +270,6 @@ def tester(fn, ln, num, fac):
     #time.sleep(3)
     #notepad.activate()
     keyboard.write('This is the info: '+fn+' '+ln+' '+num+' '+fac)
-tester('21', '21', '12', '12')
-theme_name_list = sg.theme_list()
-print(theme_name_list)
+#tester('21', '21', '12', '12')
+#theme_name_list = sg.theme_list()
+#print(theme_name_list)

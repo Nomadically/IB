@@ -18,13 +18,30 @@ import win32ui
 import os
 import sys
 
+
+# 2/22/22: can now find inmate info straight from vinelink without entering any info>
+#https://vinelink.vineapps.com/search/persons;limit=20;offset=0;showPhotos=false;isPartialSearch=false;siteRefId=CASWVINE;personContextRefId=k13758;stateServed=CA
+# need to modify these parts of URL = 1) "(state by 2 letter Abbrev)SWVINE", 2) personContextRefId="(inmate number here)", and 3) stateServed="(state by 2 letter abbrev)"
+
+
+# 2/25/22: maybe same as vine URL works for FL state:
+# http://www.dc.state.fl.us/OffenderSearch/list.aspx?Page=List&TypeSearch=AI&DataAction=Filter&dcnumber=E31995&photosonly=0&nophotos=1&matches=20
+
+#http://www.dc.state.fl.us/OffenderSearch/list.aspx?Page=List&TypeSearch=AI&DataAction=Filter&dcnumber=[dc number]&photosonly=0&nophotos=1&matches=20
+
+#http://www.dc.state.fl.us/OffenderSearch/list.aspx?Page=List&TypeSearch=AI&DataAction=Filter&dcnumber=l39407&photosonly=0&nophotos=1&matches=20
+
+
+
 # maybe devise ahk script that starts the python program?
 ahk = AHK()
 #sg.theme('DarkAmber')
 sg.theme('DarkTeal6')
 
 for window in ahk.windows():
-    if b'Mailware' in window.title:
+    # if b'Mailware' in window.title:
+    #     mailware = ahk.find_window(title=window.title)
+    if b'Channergy' in window.title:
         mailware = ahk.find_window(title=window.title)
     if b'ibProject' in window.title:
         ib = ahk.find_window(title=window.title)
@@ -129,20 +146,20 @@ def updating(arg1, **kwargs): # maybe insert a facID column to help id places? g
 #         print('Done! Alh')
 
 
-# def finding(input):
-#     f = open('customers10.csv', 'rt') #also #filename = 'customers10-Copy.csv'
-#     csv_reader = csv.DictReader(f, escapechar='\\')
-#     # check = 'bibb'
-#     for row in csv_reader:
-#         if input.title() in row['name']:
-#             print(row['name'])
-#             print(row['address'])
-#             print(row['street'])
-#             print(row['zip'])
-#             return row['name']
-#         else:
-#             return "Not found! Please contact admin."
-#     f.close
+def finding(input):
+    f = open('customers10.csv', 'rt') #also #filename = 'customers10-Copy.csv'
+    csv_reader = csv.DictReader(f, escapechar='\\')
+    # check = 'bibb'
+    for row in csv_reader:
+        if input.title() in row['name']:
+            print(row['name'])
+            print(row['address'])
+            print(row['street'])
+            print(row['zip'])
+            return row['name']
+        else:
+            return "Not found! Please contact admin."
+    f.close
 
 # def WindowExists(classname):
 #     try:
@@ -153,28 +170,28 @@ def updating(arg1, **kwargs): # maybe insert a facID column to help id places? g
 #         return True
 
 
-def finding(fn, ln):
-    for window in ahk.windows():
-        if b'Search for Customer' == window.title:
-            custfind = ahk.find_window(title=window.title)
-            custfind.close()
-        if b'Mailware' in window.title:
-            mailware = ahk.find_window(title=window.title)
-            mailware.activate()
-    # try:
-    #     custfind.activate()
-    # except NameError:
-    #     mailware.activate()
-    # mailware.activate()
-    # keyboard.send('esc')
-    keyboard.send('f4')
-    time.sleep(1)
-    keyboard.send('alt+f')
-    keyboard.write(fn.strip())
-    keyboard.send('tab')
-    keyboard.write(ln.strip())
-    time.sleep(1)
-    keyboard.send('enter')
+# def finding(fn, ln):
+#     for window in ahk.windows():
+#         if b'Search for Customer' == window.title:
+#             custfind = ahk.find_window(title=window.title)
+#             custfind.close()
+#         if b'Mailware' in window.title:
+#             mailware = ahk.find_window(title=window.title)
+#             mailware.activate()
+#     # try:
+#     #     custfind.activate()
+#     # except NameError:
+#     #     mailware.activate()
+#     # mailware.activate()
+#     # keyboard.send('esc')
+#     keyboard.send('f4')
+#     time.sleep(1)
+#     keyboard.send('alt+f')
+#     keyboard.write(fn.strip())
+#     keyboard.send('tab')
+#     keyboard.write(ln.strip())
+#     time.sleep(1)
+#     keyboard.send('enter')
 
 
 # don't bother with find inmate aspect, just keep program to creating account with info given
@@ -296,7 +313,7 @@ def mailwareupdate(fac):
         if b'Search for Customer' == window.title:
             custfind = ahk.find_window(title=window.title)
             custfind.close()
-        if b'Mailware' in window.title:
+        if b'Channergy' in window.title:
             mailware = ahk.find_window(title=window.title)
             mailware.activate()
     keyboard.send('f4')
@@ -373,7 +390,7 @@ def mailwarefocus(fac, fn, ln, inm):
         if b'Search for Customer' == window.title:
             custfind = ahk.find_window(title=window.title)
             custfind.close()
-        if b'Mailware' in window.title:
+        if b'Channergy' in window.title:
             mailware = ahk.find_window(title=window.title)
             mailware.activate()
     keyboard.send('f4')
@@ -510,8 +527,6 @@ abbrev_us_state = dict(map(reversed, us_state_abbrev.items()))
 myDict = {}
 def statesfac():
     # below will create dictionary that to populate two combo boxes
-
-
     for s in states0:
         #f = open('customers10.csv', 'rt')
         f = open('customers10-Copy.csv', 'rt')
@@ -603,7 +618,7 @@ y = sg.Button('Quit')
 z = sg.Button('Clear All Data')
 xyz = sg.Button('Need to create or update facility info?')
 search = sg.Button('Check Info Online')
-updateinfo = sg.Button('Update Address in Mailware')
+updateinfo = sg.Button('Update Address in Channergy')
 newfac = sg.Button('Add New Facility to CSV - Admin Only')
 find = sg.Button('Find Inmate in JPay')
 restart = sg.Button('Restart Program')
@@ -632,6 +647,7 @@ layout = [
     #[restart]
 ]
 
+# 2/16/22: add a 2nd inmate number field, make it optional to add into mailware
 
 window = sg.Window('Inmate Account Creation', layout, use_ttk_buttons=True, finalize=True, resizable=True)
 
@@ -706,6 +722,7 @@ while True:
         keyboard.send('tab')
     if event == 'Check Info Online':
         url = 'https://www.google.com/search?q=' + values['mainproject'] + ' inmate locator'
+        # 02/07/22: below now works alh
         vinelinks = ['LA', 'MA', 'AK']
         if (values['mainproject'] in vinelinks):
             url = 'https://www.google.com/search?q=' + values['mainproject'] + ' vinelink inmate'
@@ -727,7 +744,7 @@ while True:
 
             else:
                 pyperclip.copy(str((values['inm']).upper()).strip())
-            # original location of url value, 02/07/22
+            # original location of url value, 02/07/22, ---- now done alh
         webbrowser.open(url, new=0, autoraise=True)
     if event == 'Update Address in Mailware':
         #mailwareupdate(fieldentry(values['subproject']))
