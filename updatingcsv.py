@@ -234,6 +234,23 @@ def newentry(arg1, **kwargs):
 
 print("check 1")
 
+# newentry('RIVERBEND CORRECTIONAL FACILITY',
+#          street='196 LAYING FARM RD',
+#          street2='',
+#          address='MILLEDGEVILLE, GA 31061',
+#          zip='31061',
+#          website='http://www.dcor.state.ga.us/Facilities/riverbend-corr-facility')
+
+
+# newentry('Northern State Prison',
+#          street='P.O. Box 2300',
+#          street2='',
+#          address='Newark, NJ 07114',
+#          zip='07114',
+#          website='https://www.prisonpro.com/content/northern-state-prison')
+
+
+
 
 # newentry('Plane State Jail',
 #          street='904 FM 686',

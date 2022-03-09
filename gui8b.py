@@ -673,7 +673,7 @@ while True:
         # from here, take values entered into name first and last, then close cust find window (via escape)
         #my_popup() # <<< change here
         #continue
-    elif event == 'Find Inmate in JPay':
+    elif event == 'Find Inmate in JPay': #need to make sure that this part throws popup if no inmate ID present, 3/9/22
         #url_jpay = 'https://www.google.com/search?q=' + values['mainproject'] + ' inmate locator'
         url_jpay = 'https://www.jpay.com/SearchResult.aspx?searchText='+values['inm']+'&searchState='+values['mainproject']+'&returnUrl=InmateInfo.aspx'
         webbrowser.open(url_jpay, new=0, autoraise=True)
@@ -746,7 +746,7 @@ while True:
                 pyperclip.copy(str((values['inm']).upper()).strip())
             # original location of url value, 02/07/22, ---- now done alh
         webbrowser.open(url, new=0, autoraise=True)
-    if event == 'Update Address in Mailware':
+    if event == 'Update Address in Channergy':
         #mailwareupdate(fieldentry(values['subproject']))
         mailwareupdate(fieldentry2(values['subproject'], values['mainproject']))
     # elif event == 'Need to create or update facility info?':

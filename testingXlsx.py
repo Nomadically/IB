@@ -19,10 +19,11 @@ with open('CAprisonsCSV.csv') as csv_file:
 tbirdPath = r'C:\Program Files\Mozilla Thunderbird\thunderbird.exe'
 to = 'yousaf@islamicbookstore.com'
 subject = 'Hello'
-body = '<html><body><h1>Header</h1>This is the body. TEST EMAIL TO SELF<br></body></html>'
+body = '''<html><body>asalaamu'alaikum (Peace be with you), Greetings,<br> </body></html>'''
 composeCommand = 'format=html,to={},subject={},body={}'.format(to, subject, body)
 subprocess.Popen([tbirdPath, '-compose', composeCommand])
 keyboard.send('ctrl+enter') # 3/4/22: get this to work!
+
 print('worked till here')
 
 
