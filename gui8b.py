@@ -675,7 +675,7 @@ while True:
         #continue
     elif event == 'Find Inmate in JPay': #need to make sure that this part throws popup if no inmate ID present, 3/9/22
         #url_jpay = 'https://www.google.com/search?q=' + values['mainproject'] + ' inmate locator'
-        url_jpay = 'https://www.jpay.com/SearchResult.aspx?searchText='+values['inm']+'&searchState='+values['mainproject']+'&returnUrl=InmateInfo.aspx'
+        url_jpay = 'https://www.jpay.com/SearchResult.aspx?searchText='+(values['inm']).strip+'&searchState='+values['mainproject']+'&returnUrl=InmateInfo.aspx'
         webbrowser.open(url_jpay, new=0, autoraise=True)
 
     elif event == 'Check Inmate Name in Mailware':
