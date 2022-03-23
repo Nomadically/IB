@@ -31,6 +31,9 @@ import sys
 
 #http://www.dc.state.fl.us/OffenderSearch/list.aspx?Page=List&TypeSearch=AI&DataAction=Filter&dcnumber=l39407&photosonly=0&nophotos=1&matches=20
 
+#https://www.dpscs.state.md.us/inmate/search.do?searchType=name&firstnm=Delonte&lastnm=norwood
+# 3/14/22: so florida has this, Maryland, maybe other states as well
+
 
 
 # maybe devise ahk script that starts the python program?
@@ -273,17 +276,20 @@ def fieldentry2(facility, state):
         if facility in row['name'] and state in row['address']: # >>>>>>>>>>>>>>>>> need to update this logic, add 2nd check
             n = row['name']         # like matching state as well as facility !! <<<<--- 09/10/21
             strt = row['street']
-            if row['street2'] is not None:
-                strt2 = row['street2'], #need to add this also, 12/01/21, done on 12/09/21
             zpp = row['zip']
+            if row['street2'] is not None and len(row['street2']) > 1:
+                strt2 = row['street2'], #need to add this also, 12/01/21, done on 12/09/21
+                results = [n.strip(), strt.strip(), strt2.strip(), zpp.strip()]
+            else:
+                results = [n.strip(), strt.strip(), zpp.strip()]
             break
     f.close
     print(row)
-    if row['street2'] is not None and len(row['street2']) > 1:
-        # 01/28/22: fix the below, the str casting of str2, looks like a tuple inside mailware
-        results = [n.strip(), strt.strip(), str(strt2).strip(), zpp.strip()] #add str2 to this array <<< 12/01/21, then continue tracing where else code needs to be updated
-    else:
-        results = [n.strip(), strt.strip(), zpp.strip()]
+    # if row['street2'] is not None and len(row['street2']) > 1:
+    #     # 01/28/22: fix the below, the str casting of str2, looks like a tuple inside mailware
+    #     results = [n.strip(), strt.strip(), str(strt2).strip(), zpp.strip()] #add str2 to this array <<< 12/01/21, then continue tracing where else code needs to be updated
+    # else:
+    #     results = [n.strip(), strt.strip(), zpp.strip()]
     return results
 
 # finish here!!!
@@ -674,8 +680,9 @@ while True:
         #my_popup() # <<< change here
         #continue
     elif event == 'Find Inmate in JPay': #need to make sure that this part throws popup if no inmate ID present, 3/9/22
+        # inmjpay = (values['inm']).strip --- 3/11/22: doesn't work yet
         #url_jpay = 'https://www.google.com/search?q=' + values['mainproject'] + ' inmate locator'
-        url_jpay = 'https://www.jpay.com/SearchResult.aspx?searchText='+(values['inm']).strip+'&searchState='+values['mainproject']+'&returnUrl=InmateInfo.aspx'
+        url_jpay = 'https://www.jpay.com/SearchResult.aspx?searchText='+values['inm']+'&searchState='+values['mainproject']+'&returnUrl=InmateInfo.aspx'
         webbrowser.open(url_jpay, new=0, autoraise=True)
 
     elif event == 'Check Inmate Name in Mailware':
@@ -705,6 +712,17 @@ while True:
             continue
         try:
             #mailwarefocus(fieldentry(values['subproject']), values['fn'], values['ln'], values['inm'])
+            # if values['mainproject'] == 'TX': ----> 3/21/22: if ever need to have inmate numbers be precise count, then add state/etc here, yc
+            #     str_inm_num = str((values['inm']).strip())
+            #     tx_zerofilled = str_inm_num.zfill(8)
+            #     pyperclip.copy(tx_zerofilled)
+            # elif values['mainproject'] == 'AR':
+            #     str_inm_num = str((values['inm']).strip())
+            #     ar_zerofilled = str_inm_num.zfill(6)
+            #     pyperclip.copy(ar_zerofilled)
+            #
+            # else:
+            #     pyperclip.copy(str((values['inm']).upper()).strip())
             mailwarefocus(fieldentry2(values['subproject'], values['mainproject']), values['fn'], values['ln'], str(values['inm']).upper())
             #sg.Popup('Ok clicked', keep_on_top=True)
             continue

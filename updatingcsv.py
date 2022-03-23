@@ -234,6 +234,13 @@ def newentry(arg1, **kwargs):
 
 print("check 1")
 
+# newentry('Mid-State Correctional Facility',
+#          street='P.O. Box 866',
+#          street2='',
+#          address='Wrightstown, NJ 08562',
+#          zip='08562',
+#          website='https://www.prisonpro.com/content/mid-state-correctional-facility')
+
 # newentry('RIVERBEND CORRECTIONAL FACILITY',
 #          street='196 LAYING FARM RD',
 #          street2='',

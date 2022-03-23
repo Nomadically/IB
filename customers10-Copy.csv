@@ -980,7 +980,7 @@ Northeast Correctional Complex,1266-1270 US Route 5,,"St.Johnsbury, VT 05819",58
 Northwest State Correctional Facility,3649 Lower Newton Road,,"Swanton, VT 05488",5488,https://www.prisonpro.com/content/northwest-state-correctional-facility
 Southeast State Correctional Facility,546 State Farm Road,,"Windsor, VT 05089",5089,https://www.prisonpro.com/content/southeast-state-correctional-facility
 Southern State Correctional Facility,700 Charlestown Road,,"Springfield, VT 05156",5156,https://www.prisonpro.com/content/southern-state-correctional-facility-springfield
-Augusta Correctional Center,1821 Estaline Valley Road,,"Craigsville, Virginia 24430",24430,https://www.prisonpro.com/content/augusta-correctional-center
+Augusta Correctional Center,1821 Estaline Valley Road,,"Craigsville, VA 24430",24430,https://www.prisonpro.com/content/augusta-correctional-center
 Baskerville Correctional Center,4150 Hayes Mill Road,,"Baskerville, VA 23915",23915,https://www.prisonpro.com/content/baskerville-correctional-center
 Bland Correctional Center,256 Bland Farm Road,,"Bland, VA 24315-9615",24315,https://www.prisonpro.com/content/bland-correctional-center
 Brunswick Work Center,P.O. Box 207C,,"Lawrenceville, VA 23868",23868,https://www.prisonpro.com/content/brunswick-work-center
@@ -993,7 +993,7 @@ Deep Meadow Correctional Center,3500 Woods Way,,"State Farm, VA 23160",23160,htt
 Deerfield Correctional Center,21360 Deerfield Drive,,"Capron, VA 23829",23829,https://www.prisonpro.com/content/deerfield-correctional-center
 Dillwyn Correctional Center,P.O. Box 670,,"Dillwyn, VA 23936",23936,https://www.prisonpro.com/content/dillwyn-correctional-center
 Fluvanna Correctional Center for Women,144 Prison Lane,,"Troy, VA 22974",22974,https://www.prisonpro.com/content/fluvanna-correctional-center-women
-Green Rock Correctional Center,475 Green Rock Lane,,"Chatham, Virginia 24531",24531,https://www.prisonpro.com/content/green-rock-correctional-center
+Green Rock Correctional Center,475 Green Rock Lane,,"Chatham, VA 24531",24531,https://www.prisonpro.com/content/green-rock-correctional-center
 Greensville Correctional Center,901 Corrections Way,,"Jarratt, VA 23870-9614",23870,https://www.prisonpro.com/content/greensville-correctional-center
 Halifax Correctional Unit,Box 1789,,"Halifax, VA 24558",24558,https://www.prisonpro.com/content/halifax-correctional-unit
 Haynesville Correctional Center,P.O. Box 129,,"Haynesville, VA 22472",22472,https://www.prisonpro.com/content/haynesville-correctional-center
@@ -1122,8 +1122,9 @@ Dorsey Run Correctional Facility,2020 Toulson Road,,"JESSUP, MD 20794",20794,htt
 Wyoming State Penitentiary,P.O. Box 400,,"RAWLINS, WY 82301",82301,https://www.prisonpro.com/content/wyoming-state-penitentiary
 Limon Correctional Facility,49030 State Hwy 71 South,,"LIMON, CO 80826",80826,https://cdoc.colorado.gov/facilities/limon-correctional-facility
 Marcy Correctional Facility,P.O. Box 3600,,"MARCY, NY 13403-3600",13403,https://doccs.ny.gov/location/marcy-correctional-facility
-Edna Mahan CF for Women,P.O. Box 4004,,"CLINTON, NJ 08809",08809,https://www.prisonpro.com/content/edna-mahan-correctional-facility-women
-Southern State Correctional Facility,4295 Route 47,,"DELMONT, NJ 08314",08314,https://www.prisonpro.com/content/southern-state-correctional-facility
+Edna Mahan CF for Women,P.O. Box 4004,,"CLINTON, NJ 08809",8809,https://www.prisonpro.com/content/edna-mahan-correctional-facility-women
+Southern State Correctional Facility,4295 Route 47,,"DELMONT, NJ 08314",8314,https://www.prisonpro.com/content/southern-state-correctional-facility
 Plane State Jail,904 Fm 686,,"DAYTON, TX 77535",77535,https://www.tdcj.texas.gov/unit_directory/unit_information.html
-Northern State Prison,P.O. Box 2300,,"NEWARK, NJ 07114",07114,https://www.prisonpro.com/content/northern-state-prison
+Northern State Prison,P.O. Box 2300,,"NEWARK, NJ 07114",7114,https://www.prisonpro.com/content/northern-state-prison
 RIVERBEND CORRECTIONAL FACILITY,196 Laying Farm Rd,,"MILLEDGEVILLE, GA 31061",31061,http://www.dcor.state.ga.us/Facilities/riverbend-corr-facility
+Mid-State Correctional Facility,P.O. Box 866,,"WRIGHTSTOWN, NJ 08562",8562,https://www.prisonpro.com/content/mid-state-correctional-facility
