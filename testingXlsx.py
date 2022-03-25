@@ -132,53 +132,63 @@ if send_to_prisons[testprison] is not None:
 
 
 prisons = {
-
-{'Avenal State Prison': {'manifest':'ref#', 'nameID':''}},
-{'California City Correctional Facility': {'manifest':'ref#', 'nameID':''}},
-{'Calipatria State Prison': {'manifest':'ref#', 'nameID':''}},
-{'California Correctional Center': {'manifest':'ref#', 'nameID':''}},
-{'California Correctional Institution': {'manifest':'ref#', 'nameID':''}},
-{'California Correctional Women’s Facility': {'manifest':'ref#', 'nameID':''}},
-{'California State Prison, Centinela': {'manifest':'ref#', 'nameID':''}},
-{'California Health Care Facility': {'manifest':'ref#', 'nameID':''}},
-{'California Institution for Men': {'manifest':'ref#', 'nameID':''}},
-{'California Institution for Women': {'manifest':'ref#', 'nameID':''}},
-{'California Men’s Colony': {'manifest':'ref#', 'nameID':''}},
-{'California Medical Facility': {'manifest':'ref#', 'nameID':''}},
-{'California State Prison, Corcoran': {'manifest':'ref#', 'nameID':''}},
-{'California Rehabilitation Center': {'manifest':'ref#', 'nameID':''}},
-{'Correctional Training Facility': {'manifest':'ref#', 'nameID':''}},
-{'Chuckawalla Valley State Prison': {'manifest':'ref#', 'nameID':''}},
-{'Folsom State Prison': {'manifest':'ref#', 'nameID':''}},
-{'High Desert State Prison': {'manifest':'ref#', 'nameID':''}},
-{'Ironwood State Prison': {'manifest':'ref#', 'nameID':''}},
-{'Kern Valley State Prison': {'manifest':'ref#', 'nameID':''}},
-{'California State Prison, Los Angeles County': {'manifest':'ref#', 'nameID':''}},
-{'Mule Creek State Prison': {'manifest':'ref#', 'nameID':''}},
-{'North Kern State Prison': {'manifest':'ref#', 'nameID':''}},
-{'Pelican Bay State Prison': {'manifest':'ref#', 'nameID':''}},
-{'Pleasant Valley State Prison': {'manifest':'ref#', 'nameID':''}},
-{'R. J. Donovan Correctional Facility': {'manifest':'ref#', 'nameID':''}},
-{'California State Prison, Sacramento': {'manifest':'ref#', 'nameID':''}},
-{'SATF State Prison, Corcoran': {'manifest':'ref#', 'nameID':''}},
-{'Sierra Conservation Center': {'manifest':'ref#', 'nameID':''}},
-{'California State Prison, Solano': {'manifest':'ref#', 'nameID':''}},
-{'San Quentin State Prison': {'manifest':'ref#', 'nameID':''}},
-{'Salinas Valley State Prison': {'manifest':'ref#', 'nameID':''}},
-{'Valley State Prison': {'manifest':'ref#', 'nameID':''}}
-
+'Avenal State Prison': {'manifest':'ref#', 'nameID':''},
+'California City Correctional Facility': {'manifest':'ref#', 'nameID':''},
+'Calipatria State Prison': {'manifest':'ref#', 'nameID':''},
+'California Correctional Center': {'manifest':'ref#', 'nameID':''},
+'California Correctional Institution': {'manifest':'ref#', 'nameID':''},
+'California Correctional Women’s Facility': {'manifest':'ref#', 'nameID':''},
+'California State Prison, Centinela': {'manifest':'ref#', 'nameID':''},
+'California Health Care Facility': {'manifest':'ref#', 'nameID':''},
+'California Institution for Men': {'manifest':'ref#', 'nameID':''},
+'California Institution for Women': {'manifest':'ref#', 'nameID':''},
+'California Men’s Colony': {'manifest':'ref#', 'nameID':''},
+'California Medical Facility': {'manifest':'ref#', 'nameID':''},
+'CSP, Corcoran': {'manifest':'ref#', 'nameID':''},
+'California Rehabilitation Center': {'manifest':'ref#', 'nameID':''},
+'Correctional Training Facility': {'manifest':'ref#', 'nameID':''},
+'Chuckawalla Valley State Prison': {'manifest':'ref#', 'nameID':''},
+'Folsom State Prison': {'manifest':'ref#', 'nameID':''},
+'High Desert State Prison': {'manifest':'ref#', 'nameID':''},
+'Ironwood State Prison': {'manifest':'ref#', 'nameID':''},
+'Kern Valley State Prison': {'manifest':'ref#', 'nameID':''},
+'CSP, Los Angeles County': {'manifest':'ref#', 'nameID':''},
+'Mule Creek State Prison': {'manifest':'ref#', 'nameID':''},
+'North Kern State Prison': {'manifest':'ref#', 'nameID':''},
+'Pelican Bay State Prison': {'manifest':'ref#', 'nameID':''},
+'Pleasant Valley State Prison': {'manifest':'ref#', 'nameID':''},
+'R. J. Donovan Correctional Facility': {'manifest':'ref#', 'nameID':''},
+'California State Prison, Sacramento': {'manifest':'ref#', 'nameID':''},
+'SATF SP, Corcoran': {'manifest':'ref#', 'nameID':''},
+'Sierra Conservation Center': {'manifest':'ref#', 'nameID':''},
+'California State Prison, Solano': {'manifest':'ref#', 'nameID':''},
+'San Quentin State Prison': {'manifest':'ref#', 'nameID':''},
+'Salinas Valley State Prison': {'manifest':'ref#', 'nameID':''},
+'Valley State Prison': {'manifest':'ref#', 'nameID':''}
 }
+
 
 testprison2 = 'Salinas Valley State Prison'
 
 
+for pr, pi in prisons.items():
+    print(pr)
 
-if prisons[testprison2]['nameID'] != '':
-    print('good')
-    print(send_to_prisons[testprison]['manifest'])
+    for key in pi:
+        print(key+':', pi[key])
+
+print('ok till here 2 for now')
+
+testprison3 = 'Salinas Valley State Prison'
+
+if prisons[testprison3] is not None and prisons[testprison3]['nameID'] != '':
+    print(prisons[testprison3]['manifest'])
 else:
-    print(prisons[testprison2]['manifest'])
+    print('need a name here')
 
+# if send_to_prisons[testprison] is not None:
+#     print('good')
+#     print(send_to_prisons[testprison]['manifest'])
 
 
 # f = open('CAprisonsCSV.csv', 'rt')
