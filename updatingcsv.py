@@ -234,6 +234,16 @@ def newentry(arg1, **kwargs):
 
 print("check 1")
 
+# newentry('Clinton Correctional Facility',
+#          street='P.O. Box 2000',
+#          street2='',
+#          address='Dannemora, NY 12929',
+#          zip='12929',
+#          website='https://doccs.ny.gov/location/clinton-correctional-facility')
+
+
+
+
 # newentry('Mid-State Correctional Facility',
 #          street='P.O. Box 866',
 #          street2='',

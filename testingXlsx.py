@@ -1,30 +1,184 @@
 import csv
 import subprocess
+import time
+import pyperclip
 from ahk import AHK
 import keyboard
+import datetime
 
 from openpyxl import load_workbook
+wb = load_workbook(filename='Manifest-EmailTemplate.xlsx')
+#worksheet = wb.get_sheet_by_name('Sheet1')
+sheet1 = wb['Sheet1']
+#worksheet['D3']='Whatever you want to put in D3'
+sheet1['D3'] = 'Testing 03/25/2022'
+wb.save('Manifest-EmailTemplate-Test.xlsx')
 
 prisons = {}
+
+place = 'Valley'
 
 with open('CAprisonsCSV.csv') as csv_file:
     # reading the csv file using DictReader
     csv_reader = csv.DictReader(csv_file)
     for row in csv_reader:
-        if 'Valley' in row['prison']:
+        if place in row['prison']:
             print(row)
             # break
 
-
+date = 'Mar 12th-Apr 1st 2022'
 tbirdPath = r'C:\Program Files\Mozilla Thunderbird\thunderbird.exe'
 to = 'yousaf@islamicbookstore.com'
-subject = 'Hello'
-body = '''<html><body>asalaamu'alaikum (Peace be with you), Greetings,<br> </body></html>'''
+subject = """Master List for IslamicBookstore.com -"""+date
+body = ''
+message = """asalaamu'alaikum (Peace be with you),
+
+Greetings,
+
+Please find attached the master list for the package(s) being shipped this week.
+
+It is expected to arrive within 10 to 14 business days via USPS or FedEx.
+
+IF YOU DO NOT RECEIVE THESE PACKAGES, PLEASE NOTIFY US AS SOON AS POSSIBLE.
+
+
+If you have any questions or concerns, please let us know.
+
+Thank you, 
+"""
+pyperclip.copy(message)
 composeCommand = 'format=html,to={},subject={},body={}'.format(to, subject, body)
 subprocess.Popen([tbirdPath, '-compose', composeCommand])
-keyboard.send('ctrl+enter') # 3/4/22: get this to work!
+time.sleep(1)
+keyboard.send('ctrl+v')
+# keyboard.write(message)
+
+# keyboard.send('ctrl+enter') # 3/4/22: get this to work!
 
 print('worked till here')
+
+us_state_abbrev = {
+    'Alabama': 'AL',
+    'Alaska': 'AK',
+    'American Samoa': 'AS',
+    'Arizona': 'AZ',
+    'Arkansas': 'AR',
+    'California': 'CA',
+    'Colorado': 'CO',
+    'Connecticut': 'CT',
+    'Delaware': 'DE',
+    'District of Columbia': 'DC',
+    'Florida': 'FL',
+    'Georgia': 'GA',
+    'Guam': 'GU',
+    'Hawaii': 'HI',
+    'Idaho': 'ID',
+    'Illinois': 'IL',
+    'Indiana': 'IN',
+    'Iowa': 'IA',
+    'Kansas': 'KS',
+    'Kentucky': 'KY',
+    'Louisiana': 'LA',
+    'Maine': 'ME',
+    'Maryland': 'MD',
+    'Massachusetts': 'MA',
+    'Michigan': 'MI',
+    'Minnesota': 'MN',
+    'Mississippi': 'MS',
+    'Missouri': 'MO',
+    'Montana': 'MT',
+    'Nebraska': 'NE',
+    'Nevada': 'NV',
+    'New Hampshire': 'NH',
+    'New Jersey': 'NJ',
+    'New Mexico': 'NM',
+    'New York': 'NY',
+    'North Carolina': 'NC',
+    'North Dakota': 'ND',
+    'Northern Mariana Islands':'MP',
+    'Ohio': 'OH',
+    'Oklahoma': 'OK',
+    'Oregon': 'OR',
+    'Pennsylvania': 'PA',
+    'Puerto Rico': 'PR',
+    'Rhode Island': 'RI',
+    'South Carolina': 'SC',
+    'South Dakota': 'SD',
+    'Tennessee': 'TN',
+    'Texas': 'TX',
+    'Utah': 'UT',
+    'Vermont': 'VT',
+    'Virgin Islands': 'VI',
+    'Virginia': 'VA',
+    'Washington': 'WA',
+    'West Virginia': 'WV',
+    'Wisconsin': 'WI',
+    'Wyoming': 'WY'
+}
+# creating nested dictionary of each facility, map to inmate-manifest
+send_to_prisons = {
+    'facility 1': {'manifest': '54321', 'nameID': 'Joe Blow 12345'},
+    'facility 2': {'manifest': 'aa', 'nameID': 'Joe Cool 98765'}
+}
+
+print(us_state_abbrev['Virginia'])
+
+testprison = 'facility 2'
+
+if send_to_prisons[testprison] is not None:
+    print('good')
+    print(send_to_prisons[testprison]['manifest'])
+
+
+
+prisons = {
+
+{'Avenal State Prison': {'manifest':'ref#', 'nameID':''}},
+{'California City Correctional Facility': {'manifest':'ref#', 'nameID':''}},
+{'Calipatria State Prison': {'manifest':'ref#', 'nameID':''}},
+{'California Correctional Center': {'manifest':'ref#', 'nameID':''}},
+{'California Correctional Institution': {'manifest':'ref#', 'nameID':''}},
+{'California Correctional Women’s Facility': {'manifest':'ref#', 'nameID':''}},
+{'California State Prison, Centinela': {'manifest':'ref#', 'nameID':''}},
+{'California Health Care Facility': {'manifest':'ref#', 'nameID':''}},
+{'California Institution for Men': {'manifest':'ref#', 'nameID':''}},
+{'California Institution for Women': {'manifest':'ref#', 'nameID':''}},
+{'California Men’s Colony': {'manifest':'ref#', 'nameID':''}},
+{'California Medical Facility': {'manifest':'ref#', 'nameID':''}},
+{'California State Prison, Corcoran': {'manifest':'ref#', 'nameID':''}},
+{'California Rehabilitation Center': {'manifest':'ref#', 'nameID':''}},
+{'Correctional Training Facility': {'manifest':'ref#', 'nameID':''}},
+{'Chuckawalla Valley State Prison': {'manifest':'ref#', 'nameID':''}},
+{'Folsom State Prison': {'manifest':'ref#', 'nameID':''}},
+{'High Desert State Prison': {'manifest':'ref#', 'nameID':''}},
+{'Ironwood State Prison': {'manifest':'ref#', 'nameID':''}},
+{'Kern Valley State Prison': {'manifest':'ref#', 'nameID':''}},
+{'California State Prison, Los Angeles County': {'manifest':'ref#', 'nameID':''}},
+{'Mule Creek State Prison': {'manifest':'ref#', 'nameID':''}},
+{'North Kern State Prison': {'manifest':'ref#', 'nameID':''}},
+{'Pelican Bay State Prison': {'manifest':'ref#', 'nameID':''}},
+{'Pleasant Valley State Prison': {'manifest':'ref#', 'nameID':''}},
+{'R. J. Donovan Correctional Facility': {'manifest':'ref#', 'nameID':''}},
+{'California State Prison, Sacramento': {'manifest':'ref#', 'nameID':''}},
+{'SATF State Prison, Corcoran': {'manifest':'ref#', 'nameID':''}},
+{'Sierra Conservation Center': {'manifest':'ref#', 'nameID':''}},
+{'California State Prison, Solano': {'manifest':'ref#', 'nameID':''}},
+{'San Quentin State Prison': {'manifest':'ref#', 'nameID':''}},
+{'Salinas Valley State Prison': {'manifest':'ref#', 'nameID':''}},
+{'Valley State Prison': {'manifest':'ref#', 'nameID':''}}
+
+}
+
+testprison2 = 'Salinas Valley State Prison'
+
+
+
+if prisons[testprison2]['nameID'] != '':
+    print('good')
+    print(send_to_prisons[testprison]['manifest'])
+else:
+    print(prisons[testprison2]['manifest'])
+
 
 
 # f = open('CAprisonsCSV.csv', 'rt')

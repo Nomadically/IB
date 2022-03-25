@@ -34,7 +34,8 @@ import sys
 #https://www.dpscs.state.md.us/inmate/search.do?searchType=name&firstnm=Delonte&lastnm=norwood
 # 3/14/22: so florida has this, Maryland, maybe other states as well
 
-
+# 3/24/22:seems Texas has a way too:
+# https://inmate.tdcj.texas.gov/InmateSearch/viewDetail.action?sid=02734683
 
 # maybe devise ahk script that starts the python program?
 ahk = AHK()
