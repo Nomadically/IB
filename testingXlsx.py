@@ -11,7 +11,7 @@ wb = load_workbook(filename='Manifest-EmailTemplate.xlsx')
 #worksheet = wb.get_sheet_by_name('Sheet1')
 sheet1 = wb['Sheet1']
 #worksheet['D3']='Whatever you want to put in D3'
-sheet1['D3'] = 'Testing 03/25/2022'
+sheet1['D3'] = 'Testing 03/27/2022'
 wb.save('Manifest-EmailTemplate-Test.xlsx')
 
 prisons = {}
@@ -27,8 +27,9 @@ with open('CAprisonsCSV.csv') as csv_file:
             # break
 
 date = 'Mar 12th-Apr 1st 2022'
-tbirdPath = r'C:\Program Files\Mozilla Thunderbird\thunderbird.exe'
-to = 'yousaf@islamicbookstore.com'
+tbirdPath = r'E:\Program Files\Mozilla Thunderbird\thunderbird.exe'
+to = 'ykchaudry@gmail.com'
+attachment = r'C:\Users\think\Documents\progressQuestion.png'
 subject = """Master List for IslamicBookstore.com -"""+date
 body = ''
 message = """asalaamu'alaikum (Peace be with you),
@@ -47,13 +48,13 @@ If you have any questions or concerns, please let us know.
 Thank you, 
 """
 pyperclip.copy(message)
-composeCommand = 'format=html,to={},subject={},body={}'.format(to, subject, body)
+composeCommand = 'format=html,to={},subject={},body={},attachment={}'.format(to, subject, body, attachment)
 subprocess.Popen([tbirdPath, '-compose', composeCommand])
 time.sleep(1)
 keyboard.send('ctrl+v')
-# keyboard.write(message)
+# keyboard.write(message) -- this also works but not needed, faster to paste
 
-# keyboard.send('ctrl+enter') # 3/4/22: get this to work!
+#keyboard.send('ctrl+enter') # 3/4/22: get this to work!--works
 
 print('worked till here')
 
@@ -185,6 +186,24 @@ if prisons[testprison3] is not None and prisons[testprison3]['nameID'] != '':
     print(prisons[testprison3]['manifest'])
 else:
     print('need a name here')
+
+
+"""
+3/27/22:
+
+right now, can create email with defined fields, and add attachment
+now to send, done
+
+
+
+
+
+
+"""
+
+
+
+
 
 # if send_to_prisons[testprison] is not None:
 #     print('good')

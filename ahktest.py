@@ -15,10 +15,10 @@ import win32ui
 ahk = AHK()
 
 
-#win = ahk.active_window                        # Get the active window
-#win = ahk.win_get(title='Untitled - Notepad')  # by title
-#win = list(ahk.windows())                      # list of all windows
-#print(win)
+# win = ahk.active_window                        # Get the active window
+# win = ahk.win_get(title='Untitled - Notepad')  # by title
+# win = list(ahk.windows())                      # list of all windows
+# print(win)
 
 
 #win = Window(ahk, ahk_id='0xabc123')           # by ahk_id
@@ -269,3 +269,5 @@ def tester(fn, ln, num, fac):
 tester('21', '21', '12', '12')
 theme_name_list = sg.theme_list()
 print(theme_name_list)
+
+path = 'C:/'
