@@ -151,7 +151,7 @@ options = {
 
 dat1 = sg.CalendarButton(button_text='Select From date:', target='date1', format='%m-%d-%Y', key='d1')
 dat2 = sg.CalendarButton(button_text='Select To date:', target='date2', format='%m-%d-%Y', key='d2')
-
+# z = sg.Button('Clear All Data')
 layout = [[sg.Text('Program to auto-compile/send California Manifests')],
           [sg.Text('Enter inmate names and IDs:')],
           [sg.Multiline(s=(25, 2))],
@@ -162,15 +162,23 @@ layout = [[sg.Text('Program to auto-compile/send California Manifests')],
           [sg.Combo(sorted(list(prisons.keys())), **options, key="mainproject",
                     tooltip='<-Choose facility, state prisons of California CDCR->')],
           [sg.Button('Process Prison')],
+          # z,
           [sg.Button('Ok'), sg.Button('Cancel')]]
 
 # Create the Window
-window = sg.Window('Window Title', layout)
+window = sg.Window('Auto-Email California Prison Manifests', layout)
 # Event Loop to process "events" and get the "values" of the inputs
 while True:
     event, values = window.read()
     if event == sg.WIN_CLOSED or event == 'Cancel':  # if user closes window or clicks cancel
         break
+    # if event == 'Clear All Data': #implement this later, to clear fields
+    #     window['fn'].update('')
+    #     window['ln'].update('')
+    #     window['inm'].update('')
+    #     window['mainproject'].update('')
+    #     window['subproject'].update('')
+    #     keyboard.send('tab')
     if event == 'Process Prison':
         with open('CAprisonsCSV.csv') as csv_file:
             # reading the csv file using1 DictReader
@@ -192,7 +200,7 @@ while True:
                     # worksheet['D3']='Whatever you want to put in D3'
                     sheet1['A2'] = values['mainproject']  # <<<--- facility name goes in here
                     sheet1['B5'] = 'From ' + date1 + ' to ' + date2  # <<<--- date ranges go in here
-                    sheet1['B6'] = row['email']  # <<<--- email goes in here
+                    sheet1['B6'] = row['email']  # <<<--- prison's email goes in here
                     sheet1['A11'] = values[1]  # <<<--- manifest #s goes in here
                     sheet1['B11'] = values[0]  # <<<--- inmates name/ID go in here
                     filename = 'Manifest-Email-' + row['acronym']
@@ -201,38 +209,59 @@ while True:
                     date = date1 + '-' + date2
                     tbirdPath = r'E:\Program Files\Mozilla Thunderbird\thunderbird.exe'
                     to = 'ykchaudry@gmail.com'
-                    cc = 'ykchaudry@gmail.com, ykchaudry@gmail.com'
+                    cc = 'ykchaudry@gmail.com, ykchaudry@gmail.com' #change emails to prison email+AK later
                     p = Path(filename + ".xlsx").resolve()
                     print(p)
                     # attachment = r'C:\Users\think\Documents\progressQuestion.png'
                     attachment = p
-                    subject = """Manifest Master List-IslamicBookstore.com,""" + date
-                    body = ''
-                    message = """asalaamu'alaikum (Peace be with you),
+                    try:
+                        os.startfile(attachment)
+                        time.sleep(2)
+                        keyboard.send('alt+f+e')
+                        keyboard.send('enter')
+                        keyboard.send('enter')
+                        time.sleep(0.5)
+                        filetitle = 'Manifest-Email-'+row['acronym']
+                        keyboard.write(filetitle)
+                        keyboard.send('enter')
+                        time.sleep(0.5)
+                        keyboard.send('ctrl+q')
+                        time.sleep(1)
+                        p2 = Path(filetitle + ".pdf").resolve()
+                        attachment = p2
+                        subject = """Manifest Master List-IslamicBookstore.com,""" + date
+                        body = ''
+                        message = """asalaamu'alaikum (Peace be with you),
 
-                    Greetings,
+                        Greetings,
 
-                    Please find attached the manifest master list for the package(s) being shipped this week.
-                    
-                    It is expected to arrive within 10 to 14 business days via USPS or FedEx.
-                                       
-                    IF YOU DO NOT RECEIVE THESE PACKAGES, PLEASE NOTIFY US AS SOON AS POSSIBLE.
+                        Please find attached the manifest master list for the package(s) being shipped this week.
+
+                        It is expected to arrive within 10 to 14 business days via USPS or FedEx.
+
+                        IF YOU DO NOT RECEIVE THESE PACKAGES, PLEASE NOTIFY US AS SOON AS POSSIBLE.
 
 
-                    If you have any questions or concerns, please let us know.
+                        If you have any questions or concerns, please let us know.
 
-                    Thank you, 
-                    """
-                    pyperclip.copy(message)
-                    composeCommand = 'format=html,to={}, cc={},subject={},body={},attachment={}'.format(to, cc, subject,
-                                                                                                        body,
-                                                                                                        attachment)
-                    subprocess.Popen([tbirdPath, '-compose', composeCommand])
-                    time.sleep(1)
-                    keyboard.send('ctrl+v')
-                    # keyboard.write(message) -- this also works but not needed, faster to paste
+                        Thank you, 
+                        """
+                        pyperclip.copy(message)
+                        composeCommand = 'format=html,to={}, cc={},subject={},body={},attachment={}'.format(to, cc,
+                                                                                                            subject,
+                                                                                                            body,
+                                                                                                            attachment)
+                        subprocess.Popen([tbirdPath, '-compose', composeCommand])
+                        time.sleep(1)
+                        keyboard.send('ctrl+v')
+                        time.sleep(1)
+                        # keyboard.write(message) -- this also works but not needed, faster to paste
 
-                    keyboard.send('ctrl+enter') # 3/4/22: get this to work!--works
+                        keyboard.send('ctrl+enter') # 3/4/22: get this to work!--works
+
+                    except:
+                        print('this didnt work')
+
                     break
     print('You entered ', values[0], values[1])
 
