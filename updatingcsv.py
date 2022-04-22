@@ -234,6 +234,16 @@ def newentry(arg1, **kwargs):
 
 print("check 1")
 
+# newentry('Little Sandy Correctional Complex',
+#          street='505 Prison Connector',
+#          street2='',
+#          address='Sandy Hook, KY 41171',
+#          zip='41171',
+#          website='https://corrections.ky.gov/Facilities/AI/lscc/Pages/default.aspx')
+
+
+
+
 # newentry('Clinton Correctional Facility',
 #          street='P.O. Box 2000',
 #          street2='',

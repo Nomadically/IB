@@ -19,6 +19,9 @@ import os
 import sys
 
 
+# 4/22/22: can implement running python within a python script, see below
+# https://stackoverflow.com/questions/3316961/call-program-with-arguments
+
 # 2/22/22: can now find inmate info straight from vinelink without entering any info>
 #https://vinelink.vineapps.com/search/persons;limit=20;offset=0;showPhotos=false;isPartialSearch=false;siteRefId=CASWVINE;personContextRefId=k13758;stateServed=CA
 # need to modify these parts of URL = 1) "(state by 2 letter Abbrev)SWVINE", 2) personContextRefId="(inmate number here)", and 3) stateServed="(state by 2 letter abbrev)"
@@ -683,7 +686,8 @@ while True:
     elif event == 'Find Inmate in JPay': #need to make sure that this part throws popup if no inmate ID present, 3/9/22
         # inmjpay = (values['inm']).strip --- 3/11/22: doesn't work yet
         #url_jpay = 'https://www.google.com/search?q=' + values['mainproject'] + ' inmate locator'
-        url_jpay = 'https://www.jpay.com/SearchResult.aspx?searchText='+values['inm']+'&searchState='+values['mainproject']+'&returnUrl=InmateInfo.aspx'
+        inm = values['inm'].strip()
+        url_jpay = 'https://www.jpay.com/SearchResult.aspx?searchText='+inm+'&searchState='+values['mainproject']+'&returnUrl=InmateInfo.aspx'
         webbrowser.open(url_jpay, new=0, autoraise=True)
 
     elif event == 'Check Inmate Name in Mailware':

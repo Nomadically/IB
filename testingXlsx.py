@@ -27,9 +27,11 @@ with open('CAprisonsCSV.csv') as csv_file:
             # break
 
 date = 'Mar 12th-Apr 1st 2022'
-tbirdPath = r'E:\Program Files\Mozilla Thunderbird\thunderbird.exe'
-to = 'ykchaudry@gmail.com'
+tbirdPath = r'C:\Program Files\Mozilla Thunderbird\thunderbird.exe'
+#to = 'ykchaudry@gmail.com'
+to = 'yousaf@islamicbookstore.com'
 attachment = r'C:\Users\think\Documents\progressQuestion.png'
+attch2 = 'C:\\Users\\ib\\Pictures\\quote.png'
 subject = """Master List for IslamicBookstore.com -"""+date
 body = ''
 message = """asalaamu'alaikum (Peace be with you),
@@ -48,7 +50,7 @@ If you have any questions or concerns, please let us know.
 Thank you, 
 """
 pyperclip.copy(message)
-composeCommand = 'format=html,to={},subject={},body={},attachment={}'.format(to, subject, body, attachment)
+composeCommand = 'format=html,to={},subject={},body={},attachment={}'.format(to, subject, body, attch2)
 subprocess.Popen([tbirdPath, '-compose', composeCommand])
 time.sleep(1)
 keyboard.send('ctrl+v')
