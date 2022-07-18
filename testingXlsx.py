@@ -29,7 +29,9 @@ with open('CAprisonsCSV.csv') as csv_file:
 date = 'Mar 12th-Apr 1st 2022'
 tbirdPath = r'C:\Program Files\Mozilla Thunderbird\thunderbird.exe'
 #to = 'ykchaudry@gmail.com'
-to = 'yousaf@islamicbookstore.com'
+names = "yousaf@islamicbookstore.com, check@islamicbookstore.com"
+for ele in names.split(','):
+    to = f'<{ele}>'
 attachment = r'C:\Users\think\Documents\progressQuestion.png'
 attch2 = 'C:\\Users\\ib\\Pictures\\quote.png'
 subject = """Master List for IslamicBookstore.com -"""+date
@@ -50,7 +52,7 @@ If you have any questions or concerns, please let us know.
 Thank you, 
 """
 pyperclip.copy(message)
-composeCommand = 'format=html,to={},subject={},body={},attachment={}'.format(to, subject, body, attch2)
+composeCommand = 'format=html,to={},subject={},body={},attachment={}'.format(to,subject, body, attch2)
 subprocess.Popen([tbirdPath, '-compose', composeCommand])
 time.sleep(1)
 keyboard.send('ctrl+v')
@@ -188,6 +190,20 @@ if prisons[testprison3] is not None and prisons[testprison3]['nameID'] != '':
     print(prisons[testprison3]['manifest'])
 else:
     print('need a name here')
+
+
+
+to = 'Manifest.SATF@cdcr.ca.gov, Reuben.Romero@cdcr.ca.gov, Joshua.Surber@cdcr.ca.gov'
+
+print(to.split(','))
+check = to.split(',')
+
+#addresses = row['email'].split(',')
+#to = ''
+if check > 1:
+    for ele in check:
+        to.append(f'{ele},')
+    print(to)
 
 
 """

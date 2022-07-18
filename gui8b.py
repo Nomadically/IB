@@ -283,7 +283,7 @@ def fieldentry2(facility, state):
             zpp = row['zip']
             if row['street2'] is not None and len(row['street2']) > 1:
                 strt2 = row['street2'], #need to add this also, 12/01/21, done on 12/09/21
-                results = [n.strip(), strt.strip(), strt2.strip(), zpp.strip()]
+                results = [n.strip(), strt.strip(), str(strt2).strip(), zpp.strip()]
             else:
                 results = [n.strip(), strt.strip(), zpp.strip()]
             break

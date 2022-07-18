@@ -233,6 +233,25 @@ def newentry(arg1, **kwargs):
 #done =
 
 print("check 1")
+# 06/17/22: need to add sago palm re-entry, florida: http://prod.fdc-wpws001.fdc.myflorida.com/org/facilitydir.html#X464
+# also need to add sterling correction in Colorado, as of 7/12/22
+
+# newentry('Bayside State Prison',
+#          street='P.O. Box F-1',
+#          street2='',
+#          address='Leesburg, NJ 08327',
+#          zip='08327',
+#          website='')
+
+
+
+
+# newentry('Attica Correctional Facility',
+#          street='PO Box 149',
+#          street2='',
+#          address='Attica, NY 14011-0149',
+#          zip='14011',
+#          website='')
 
 # newentry('Little Sandy Correctional Complex',
 #          street='505 Prison Connector',

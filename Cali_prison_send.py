@@ -21,12 +21,12 @@ prisons = {
     'Calipatria State Prison': {'manifest': 'ref#', 'nameID': ''},
     'California Correctional Center': {'manifest': 'ref#', 'nameID': ''},
     'California Correctional Institution': {'manifest': 'ref#', 'nameID': ''},
-    'California Correctional Women\'s Facility': {'manifest': 'ref#', 'nameID': ''},
+    "California Correctional Women's Facility": {'manifest': 'ref#', 'nameID': ''},
     'California State Prison, Centinela': {'manifest': 'ref#', 'nameID': ''},
     'California Health Care Facility': {'manifest': 'ref#', 'nameID': ''},
     'California Institution for Men': {'manifest': 'ref#', 'nameID': ''},
     'California Institution for Women': {'manifest': 'ref#', 'nameID': ''},
-    "California Men\'s Colony": {'manifest': 'ref#', 'nameID': ''},
+    "California Men's Colony": {'manifest': 'ref#', 'nameID': ''},
     'California Medical Facility': {'manifest': 'ref#', 'nameID': ''},
     'California State Prison, Corcoran': {'manifest': 'ref#', 'nameID': ''},
     'California Rehabilitation Center': {'manifest': 'ref#', 'nameID': ''},
@@ -48,7 +48,8 @@ prisons = {
     'California State Prison, Solano': {'manifest': 'ref#', 'nameID': ''},
     'San Quentin State Prison': {'manifest': 'ref#', 'nameID': ''},
     'Salinas Valley State Prison': {'manifest': 'ref#', 'nameID': ''},
-    'Valley State Prison': {'manifest': 'ref#', 'nameID': ''}
+    'Valley State Prison': {'manifest': 'ref#', 'nameID': ''},
+    'Wasco State Prison': {'manifest': 'ref#', 'nameID': ''}
 }
 
 options = {
@@ -82,6 +83,9 @@ layout = [[sg.Text('Program to auto-compile/send California Manifests')],
 
 window = sg.Window('Auto-Email California Prison Manifests', layout)
 # Event Loop to process "events" and get the "values" of the inputs
+
+needed_path = input("what is file path for this week?\n")
+
 while True:
     event, values = window.read()
     if event == sg.WIN_CLOSED or event == 'Cancel':  # if user closes window or clicks cancel
@@ -124,7 +128,7 @@ while True:
                     # fname = os.path.join(my_dir, file_name)
 
                     # NEED TO MODIFY THIS FPATH BELOW FOR EVERY NEW WEEK !!!!! >>>>>>>>>>><<<<<<<<<< !!!!!!!!!!!!!
-                    fpath = 'C:\\Users\\ib\\Documents\\CA-Manifests\\April15th-April21st\\'
+                    fpath = f'C:\\Users\\ib\\Documents\\CA-Manifests\\{needed_path}\\'
                     fname = os.path.join(fpath, filename + '.xlsx')
                     wb.save(fname)
                     time.sleep(1)
@@ -172,15 +176,16 @@ while True:
                     subject = """Manifest Master List-IslamicBookstore.com- """ + date
                     body = ''
                     #to = 'yousaf@islamicbookstore.com'
+                    # if row['email'].split(',') > 1:
+                    #     to =
                     to = row['email']
+                    print(row['email'])
                     cc = 'adnank@islamicbookstore.com'
-                    message = """asalaamu'alaikum (Peace be with you),
-
-Greetings,
+                    message = """Greetings,
 
 Please find attached the manifest master list for the package(s) being shipped this week.
 
-It is expected to arrive within 10 to 14 business days via USPS or FedEx.
+It is expected to arrive within 10 to 14 business days via USPS or FedEx/UPS.
 
 IF YOU DO NOT RECEIVE THESE PACKAGES, PLEASE NOTIFY US AS SOON AS POSSIBLE.
 
@@ -211,6 +216,7 @@ Metric Networks Inc. DBA http://IslamicBookstore.com
                     keyboard.send('down')
                     time.sleep(2)
                     #keyboard.send('ctrl+enter') # 3/4/22: get this to work!-----works
+                    print("good till almost send email")
 
                     break
     print('You entered ', values[0], values[1])
