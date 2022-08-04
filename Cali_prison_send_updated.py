@@ -59,21 +59,15 @@ options = {
     "enable_events": True,
     # "element_justification": 'center'
 }
-inmate_name = sg.Input(key='name1', tooltip='Enter inmate first name here = ', size=(30,1))
-id_num = sg.Input(key='id_1', tooltip='Enter inmate number here =: ', size=(30,1))
-
-add_another_inmate = sg.Button('Click here to add inmate')
 
 dat1 = sg.CalendarButton(button_text='Select From date:', target='date1', format='%m-%d-%Y', key='d1')
 dat2 = sg.CalendarButton(button_text='Select To date:', target='date2', format='%m-%d-%Y', key='d2')
 # z = sg.Button('Clear All Data')
 layout = [[sg.Text('Program to auto-compile/send California Manifests')],
-          [sg.Text('Enter inmate name:'), inmate_name],
-          [sg.Text('Enter inmate ID:'), id_num],
-          [add_another_inmate],
-          #sg.Multiline(s=(25, 2))], #this is value[0]
+          [sg.Text('Enter inmate names and IDs:')],
+          [sg.Multiline(s=(25, 2))],
           [sg.Text('Enter manifest reference number:')],
-          #[sg.Multiline(s=(25, 2))],
+          [sg.Multiline(s=(25, 2))],
           [dat1, sg.InputText('   ', key='date1', size=(10, 1), tooltip='<- Click button to choose first date.')],
           [dat2, sg.InputText('   ', key='date2', size=(10, 1), tooltip='<- Click button to choose second date.')],
           [sg.Combo(sorted(list(prisons.keys())), **options, key="mainproject",
@@ -226,9 +220,6 @@ Metric Networks Inc. DBA http://IslamicBookstore.com
                     print("good till almost send email")
 
                     break
-    if event == 'Click here to add inmate':
-        sg.popup('ok not yet')
-        continue
     print('You entered ', values[0], values[1])
 
 window.close()
