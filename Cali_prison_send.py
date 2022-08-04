@@ -62,15 +62,15 @@ options = {
 inmate_name = sg.Input(key='name1', tooltip='Enter inmate first name here = ', size=(30,1))
 id_num = sg.Input(key='id_1', tooltip='Enter inmate number here =: ', size=(30,1))
 
-add_another_inmate = sg.Button('Click here to add inmate')
+dir_process = sg.Button('Create directory first')
 
 dat1 = sg.CalendarButton(button_text='Select From date:', target='date1', format='%m-%d-%Y', key='d1')
 dat2 = sg.CalendarButton(button_text='Select To date:', target='date2', format='%m-%d-%Y', key='d2')
 # z = sg.Button('Clear All Data')
 layout = [[sg.Text('Program to auto-compile/send California Manifests')],
-          [sg.Text('Enter inmate name:'), inmate_name],
-          [sg.Text('Enter inmate ID:'), id_num],
-          [add_another_inmate],
+         # [sg.Text('Enter inmate name:'), inmate_name],
+          #[sg.Text('Enter inmate ID:'), id_num],
+          [dir_process],
           #sg.Multiline(s=(25, 2))], #this is value[0]
           [sg.Text('Enter manifest reference number:')],
           #[sg.Multiline(s=(25, 2))],
@@ -81,6 +81,7 @@ layout = [[sg.Text('Program to auto-compile/send California Manifests')],
           [sg.Button('Process Prison')],
           # z,
           [sg.Button('Ok'), sg.Button('Cancel')]]
+
 
 # Create the Window
 # below will help to correct dir location at each run, need to finish implementing, 4/22/22
@@ -135,7 +136,7 @@ while True:
                     fpath_parent = 'C:\\Users\\ib\\Documents\\CA-Manifests\\'
                     weekly_dir = date1+"-to-"+date2
                     full_path = os.path.join(fpath_parent, weekly_dir)
-                    os.mkdir(full_path)
+                    #os.mkdir(full_path)
                     fname = os.path.join(full_path, filename + '.xlsx')
                     wb.save(fname)
                     time.sleep(1)
@@ -226,8 +227,26 @@ Metric Networks Inc. DBA http://IslamicBookstore.com
                     print("good till almost send email")
 
                     break
-    if event == 'Click here to add inmate':
-        sg.popup('ok not yet')
+    if event == 'Create directory first' and values['date1'] not in ['', None] and values['date2'] not in ['', None]:
+        window['Create directory first'].update(disabled=True)
+        date1 = values['date1']
+        date2 = values['date2']
+        try:
+            fpath_parent = 'C:\\Users\\ib\\Documents\\CA-Manifests\\'
+            weekly_dir = date1 + "-to-" + date2
+
+            full_path = os.path.join(fpath_parent, weekly_dir)
+            os.mkdir(full_path)
+        except FileExistsError:
+            sg.popup("Double check filename, date range may already exist.")
+        time.sleep(1)
+        fpath_weekly = 'C:\\Users\\ib\\Documents\\CA-Manifests\\Manifest-Weekly.xlsx'
+        #wb2 = load_workbook(fpath_weekly)
+        os.startfile(fpath_weekly)
+        sg.popup("Directory created, now proceed to Excel file and enter inmate info; once done, click Process Prison.")
+        continue
+    elif values['date1'] == '' or values['date2'] == '':
+        sg.popup('You must select date range first!')
         continue
     print('You entered ', values[0], values[1])
 
