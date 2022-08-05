@@ -53,5 +53,11 @@ for col in sheet['A']:
     prisons.append(col.value)
     #print('test')
 
+t = 0
+
 if current in prisons:
     print('finally?')
+    t = prisons.index(current)
+print(t)
+# ws.cell(row, column)
+print(sheet[('C'+str(t))].value)
