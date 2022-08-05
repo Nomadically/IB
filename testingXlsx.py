@@ -18,45 +18,45 @@ prisons = {}
 
 place = 'Valley'
 
-with open('CAprisonsCSV.csv') as csv_file:
-    # reading the csv file using DictReader
-    csv_reader = csv.DictReader(csv_file)
-    for row in csv_reader:
-        if place in row['prison']:
-            print(row)
-            # break
-
-date = 'Mar 12th-Apr 1st 2022'
-tbirdPath = r'C:\Program Files\Mozilla Thunderbird\thunderbird.exe'
-#to = 'ykchaudry@gmail.com'
-names = "yousaf@islamicbookstore.com, check@islamicbookstore.com"
-for ele in names.split(','):
-    to = f'<{ele}>'
-attachment = r'C:\Users\think\Documents\progressQuestion.png'
-attch2 = 'C:\\Users\\ib\\Pictures\\quote.png'
-subject = """Master List for IslamicBookstore.com -"""+date
-body = ''
-message = """asalaamu'alaikum (Peace be with you),
-
-Greetings,
-
-Please find attached the master list for the package(s) being shipped this week.
-
-It is expected to arrive within 10 to 14 business days via USPS or FedEx.
-
-IF YOU DO NOT RECEIVE THESE PACKAGES, PLEASE NOTIFY US AS SOON AS POSSIBLE.
-
-
-If you have any questions or concerns, please let us know.
-
-Thank you, 
-"""
-pyperclip.copy(message)
-composeCommand = 'format=html,to={},subject={},body={},attachment={}'.format(to,subject, body, attch2)
-subprocess.Popen([tbirdPath, '-compose', composeCommand])
-time.sleep(1)
-keyboard.send('ctrl+v')
-# keyboard.write(message) -- this also works but not needed, faster to paste
+# with open('CAprisonsCSV.csv') as csv_file:
+#     # reading the csv file using DictReader
+#     csv_reader = csv.DictReader(csv_file)
+#     for row in csv_reader:
+#         if place in row['prison']:
+#             print(row)
+#             # break
+#
+# date = 'Mar 12th-Apr 1st 2022'
+# tbirdPath = r'C:\Program Files\Mozilla Thunderbird\thunderbird.exe'
+# #to = 'ykchaudry@gmail.com'
+# names = "yousaf@islamicbookstore.com, check@islamicbookstore.com"
+# for ele in names.split(','):
+#     to = f'<{ele}>'
+# attachment = r'C:\Users\think\Documents\progressQuestion.png'
+# attch2 = 'C:\\Users\\ib\\Pictures\\quote.png'
+# subject = """Master List for IslamicBookstore.com -"""+date
+# body = ''
+# message = """asalaamu'alaikum (Peace be with you),
+#
+# Greetings,
+#
+# Please find attached the master list for the package(s) being shipped this week.
+#
+# It is expected to arrive within 10 to 14 business days via USPS or FedEx.
+#
+# IF YOU DO NOT RECEIVE THESE PACKAGES, PLEASE NOTIFY US AS SOON AS POSSIBLE.
+#
+#
+# If you have any questions or concerns, please let us know.
+#
+# Thank you,
+# """
+# pyperclip.copy(message)
+# composeCommand = 'format=html,to={},subject={},body={},attachment={}'.format(to,subject, body, attch2)
+# subprocess.Popen([tbirdPath, '-compose', composeCommand])
+# time.sleep(1)
+# keyboard.send('ctrl+v')
+# # keyboard.write(message) -- this also works but not needed, faster to paste
 
 #keyboard.send('ctrl+enter') # 3/4/22: get this to work!--works
 
@@ -200,11 +200,11 @@ check = to.split(',')
 
 #addresses = row['email'].split(',')
 #to = ''
-if check > 1:
-    for ele in check:
-        to.append(f'{ele},')
-    print(to)
-
+# if len(check) > 1:
+#     for ele in check:
+#         to.append(f'{ele},')
+#     print(to)
+#
 
 """
 3/27/22:
@@ -213,11 +213,12 @@ right now, can create email with defined fields, and add attachment
 now to send, done
 
 
-
+ 
 
 
 
 """
+
 
 
 
