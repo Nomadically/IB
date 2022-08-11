@@ -5,7 +5,8 @@ sg.theme('DarkAmber') # Add a touch of color
 # All the stuff inside your window.
 layout = [ [sg.Text('Some text on Row 1')],
 [sg.Text('Enter something on Row 2'), sg.InputText()],
-[sg.Button('Ok'), sg.Button('Cancel')] ]
+[sg.Button('Ok'), sg.Button('Cancel')],
+           [sg.Button('test')]]
 
 # Create the Window
 window = sg.Window('Window Title', layout)
@@ -13,9 +14,13 @@ window = sg.Window('Window Title', layout)
 # Event Loop to process "events" and get the "values" of the inputs
 while True:
     event, values = window.read()
+
     if event == sg.WIN_CLOSED or event == 'Cancel': # if user closes window or clicks cancel
         break
+    if event == "test":
+        sg.popup_timed('popup_timed')
     if event == "Ok":
+
         # what we want to do: when process prison is clicked,
         # then first thing is to create directory while making sure
         inmates_test = values[0]

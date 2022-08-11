@@ -46,6 +46,7 @@ ahk = AHK()
 sg.theme('DarkTeal6')
 
 for window in ahk.windows():
+    # start = time.perf_counter()
     # if b'Mailware' in window.title:
     #     mailware = ahk.find_window(title=window.title)
     if b'Channergy' in window.title:
@@ -55,6 +56,9 @@ for window in ahk.windows():
     if b'Search for Customer' == window.title:
         custfind = ahk.find_window(title=window.title)
         custfind.close()
+    # end = time.perf_counter()
+    # print('time it took to check windows in AHK')
+    # print(end-start)
 
 
 # --- 07/1/21: now writes properly to file ----> need to transpose this into current csv settings

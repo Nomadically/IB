@@ -1,18 +1,17 @@
-
-
 import csv
 import os
 import subprocess
-import sys
 import time
-from datetime import datetime
 from pathlib import Path
 import PySimpleGUI as sg
 import keyboard
 import pyperclip
 from openpyxl import load_workbook
 
-sg.theme('DarkAmber')  # Add a touch of color
+# sg.theme('DarkAmber')  # Add a touch of color
+sg.theme('LightBrown11')
+
+
 # All the stuff inside your window.
 
 prisons = {
@@ -62,7 +61,7 @@ options = {
 inmate_name = sg.Input(key='name1', tooltip='Enter inmate first name here = ', size=(30,1))
 id_num = sg.Input(key='id_1', tooltip='Enter inmate number here =: ', size=(30,1))
 
-dir_process = sg.Button('Create directory first')
+# dir_process = sg.Button('Create directory first')
 
 dat1 = sg.CalendarButton(button_text='Select From date:', target='date1', format='%m-%d-%Y', key='d1')
 dat2 = sg.CalendarButton(button_text='Select To date:', target='date2', format='%m-%d-%Y', key='d2')
@@ -73,7 +72,7 @@ layout = [[sg.Text('Program to auto-compile/send California Manifests')],
           #[dir_process],
           #sg.Multiline(s=(25, 2))], #this is value[0]
           [sg.Text('Enter info as follows = inmate name,inmate ID,invoice number; if 2+ inmates, separate with a semicolon.')],
-          [sg.Multiline(s=(25, 2))],
+          [sg.Multiline(s=(50, 5))],
           [dat1, sg.InputText('   ', key='date1', size=(10, 1), tooltip='<- Click button to choose first date.')],
           [dat2, sg.InputText('   ', key='date2', size=(10, 1), tooltip='<- Click button to choose second date.')],
           [sg.Combo(sorted(list(prisons.keys())), **options, key="mainproject",
@@ -117,15 +116,8 @@ while True:
                 for row in csv_reader:
                     if values['mainproject'] == row['prison']:
                         print(row['acronym'])
-                        # myDict["niche"] = "programming"
-                        # inm_info = {values[0]: values[1]}
-                        # print('You entered ', values[0], values[1])
-
                         date1 = values['date1']
                         date2 = values['date2']
-                        # print('this is what this created dict looks like:')
-                        # print(inm_info)
-                        print("at line 128")
                         print(date1)
                         print(date2)
                         # wb = load_workbook(filename='Manifest-EmailTemplate.xlsx')
@@ -141,7 +133,6 @@ while True:
                         # sheet1['C11'] = values[0]  # <<<--- inmates ID go in here
                         if ';' in values[0]:
                             inmate_group = values[0].split(';')
-                            total = len(inmate_group)
                             count = 0
                             for n in inmate_group:
                                 inmate = inmate_group[count].split(',')
@@ -167,17 +158,14 @@ while True:
                         # fname = os.path.join(my_dir, file_name)
                         fpath_parent = 'C:\\Users\\ib\\Documents\\CA-Manifests\\'
                         weekly_dir = date1+"-to-"+date2
-                        if len(weekly_dir) < 7:
-                            sg.popup("Dates not entered, please enter both From and To.")
-                            continue
                         full_path = os.path.join(fpath_parent, weekly_dir)
                         try:
                             os.mkdir(full_path)
                             time.sleep(1)
                         except FileExistsError:
-                            sg.popup("Double check name, date range may already exist.")
-                            window['Create directory first'].update(disabled=False)
-                            continue
+                            sg.popup_timed("This date range's directory already made, continuing.")
+                            # window['Create directory first'].update(disabled=False) #no longer there
+                            pass
                         fname = os.path.join(full_path, filename + '.xlsx')
                         wb.save(fname)
                         time.sleep(1)
@@ -210,23 +198,10 @@ while True:
                         fname2 = os.path.join(full_path, filename + '.pdf')
                         p2 = Path(fname2).resolve()
                         attachment2 = p2
-                        # don't forget to modify this line below ?>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> !!!<<<<<
-                        #no more need for this as of 4/15/22
-                        #date = 'Mar 12th-Apr 1st 2022' ----update as needed
-                        #date = ''
-                        # date = ''
-                        # date = ''
-                        # date = ''
-                        # date = ''
-                        # date = ''
-                        # date = ''
-                        #date = 'April 8th to April 14th 2022'
                         date = f'{date1} to {date2}'
                         subject = """Manifest Master List-IslamicBookstore.com- """ + date
                         body = ''
                         #to = 'yousaf@islamicbookstore.com'
-                        # if row['email'].split(',') > 1:
-                        #     to =
                         to = row['email']
                         print(row['email'])
                         cc = 'adnank@islamicbookstore.com'
@@ -265,34 +240,42 @@ Metric Networks Inc. DBA http://IslamicBookstore.com
                         keyboard.send('down')
                         time.sleep(2)
                         keyboard.send('tab')
+                        keyboard.send('tab')
+                        keyboard.send('tab')
                         keyboard.write('lisa@islamicbookstore.com')
+                        keyboard.send('enter')
+                        # if ',' in row['email']:
+                        #     keyboard.send('ctrl+shift+t')
+                        #     keyboard.send('backspace+backspace')
+
                         #keyboard.send('ctrl+enter') # 3/4/22: get this to work!-----works
                         print("good till almost send email")
+                        os.startfile(attachment2, "print")
 
                         break
     #  and values['date1'] != '' and values['date2'] not in ['', None]
-    if event == 'Create directory first':
-        if values['d1'] == '' or values['d2'] == '':
-            sg.popup("Please first input start date and end date.", title="Error")
-            continue
-        else:
-            try:
-                window['Create directory first'].update(disabled=True)
-                date1 = values['date1']
-                date2 = values['date2']
-                fpath_parent = 'C:\\Users\\ib\\Documents\\CA-Manifests\\'
-                weekly_dir = date1 + "-to-" + date2
-                full_path = os.path.join(fpath_parent, weekly_dir)
-                os.mkdir(full_path)
-                time.sleep(1)
-                # fpath_weekly = 'C:\\Users\\ib\\Documents\\CA-Manifests\\Manifest-Weekly.xlsx'
-                # wb2 = load_workbook(fpath_weekly)
-                # os.startfile(fpath_weekly)
-                sg.popup("Directory created, now proceed to Excel file and enter inmate info; once done, click Process Prison.")
-                continue
-            except FileExistsError:
-                sg.popup("Double check name, date range may already exist.")
-                window['Create directory first'].update(disabled=False)
-                continue
+    # if event == 'Create directory first':
+    #     if values['d1'] == '' or values['d2'] == '':
+    #         sg.popup("Please first input start date and end date.", title="Error")
+    #         continue
+    #     else:
+    #         try:
+    #             window['Create directory first'].update(disabled=True)
+    #             date1 = values['date1']
+    #             date2 = values['date2']
+    #             fpath_parent = 'C:\\Users\\ib\\Documents\\CA-Manifests\\'
+    #             weekly_dir = date1 + "-to-" + date2
+    #             full_path = os.path.join(fpath_parent, weekly_dir)
+    #             os.mkdir(full_path)
+    #             time.sleep(1)
+    #             # fpath_weekly = 'C:\\Users\\ib\\Documents\\CA-Manifests\\Manifest-Weekly.xlsx'
+    #             # wb2 = load_workbook(fpath_weekly)
+    #             # os.startfile(fpath_weekly)
+    #             sg.popup("Directory created, now proceed to Excel file and enter inmate info; once done, click Process Prison.")
+    #             continue
+    #         except FileExistsError:
+    #             sg.popup("Double check name, date range may already exist.")
+    #             window['Create directory first'].update(disabled=False)
+    #             continue
 
 window.close()
