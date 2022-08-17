@@ -203,6 +203,8 @@ while True:
                         body = ''
                         #to = 'yousaf@islamicbookstore.com'
                         to = row['email']
+                        # if row['email'].split(',') > 1:
+                        #     to = row['email'][0]
                         print(row['email'])
                         cc = 'adnank@islamicbookstore.com'
                         message = """Greetings,
@@ -211,7 +213,7 @@ Please find attached the manifest master list for the package(s) being shipped t
    
 It is expected to arrive within 10 to 14 business days via USPS or FedEx/UPS.
     
-IF YOU DO NOT RECEIVE THESE PACKAGES, PLEASE NOTIFY US AS SOON AS POSSIBLE.
+If you do not receive these packages, please notify us as soon as possible.
     
     
 If you have any questions or concerns, please let us know.
@@ -251,6 +253,7 @@ Metric Networks Inc. DBA http://IslamicBookstore.com
                         #keyboard.send('ctrl+enter') # 3/4/22: get this to work!-----works
                         print("good till almost send email")
                         os.startfile(attachment2, "print")
+                        # window[values[0]].update('')
 
                         break
     #  and values['date1'] != '' and values['date2'] not in ['', None]

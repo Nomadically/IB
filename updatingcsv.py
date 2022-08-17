@@ -230,9 +230,22 @@ def newentry(arg1, **kwargs):
 #          website='')
 
 
+
+
 #done =
 
 print("check 1")
+
+# done 8/17/22
+# newentry('Centennial Correctional Facility',
+#          street='PO BOX 600',
+#          street2='',
+#          address='Canon City, CO 81215-0600',
+#          zip='81215-0600',
+#          website='https://cdoc.colorado.gov/facilities/canon-city/centennial-correctional-facility')
+
+
+
 # 06/17/22: need to add sago palm re-entry, florida: http://prod.fdc-wpws001.fdc.myflorida.com/org/facilitydir.html#X464
 # also need to add sterling correction in Colorado, as of 7/12/22
 
