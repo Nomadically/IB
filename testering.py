@@ -1,3 +1,75 @@
+import traceback
+
+import win32gui
+import wmi
+from time import perf_counter
+from ahk import AHK, Hotkey
+import os
+import subprocess
+
+
+
+t1_start = perf_counter()
+
+def winEnumHandler( hwnd, ctx ):
+    if win32gui.IsWindowVisible( hwnd ):
+        print (hex(hwnd), win32gui.GetWindowText( hwnd ))
+
+win32gui.EnumWindows( winEnumHandler, None )
+
+
+# ahk = AHK()
+#
+# for window in ahk.windows():
+#     print(window.title)
+#
+# Running the aforementioned command and saving its output
+# output = os.popen('wmic process get description, processid').read()
+#
+# # Displaying the output
+# print(output)
+#
+# if 'svchost.exe' in output:
+#     print('here')
+
+# open_windows = win32gui.EnumWindows()
+# print(open_windows)
+
+
+# traverse the software list
+# Data = subprocess.check_output(['wmic', 'process', 'list', 'brief'])
+# a = str(Data)
+# # try block
+# #  arrange the string
+# try:
+#     for i in range(len(a)):
+#         print(a.split("\\r\\r\\n")[i])
+# except IndexError as e:
+#     print("All Done")
+
+
+
+
+# # Initializing the wmi constructor
+# f = wmi.WMI()
+#
+# # Printing the header for the later columns
+# print("pid Process name")
+#
+# # Iterating through all the running processes
+# for process in f.Win32_Process():
+#     # Displaying the P_ID and P_Name of the process
+#     print(f"{process.ProcessId:<10} {process.Name}")
+
+
+
+
+
+t1_stop = perf_counter()
+
+print("Elapsed time during the whole program in seconds:",
+      t1_stop - t1_start)
+
 import UpdateCSV
 
 # UpdateCSV.Modify.update_entry('Bibb Correctional Facility', 'AL', street='565 Bibb Lane')
