@@ -94,24 +94,24 @@ t1_start = perf_counter()
 
 
 #
-openProcesses = {}
-target = "Notepad"
+# openProcesses = {}
+# target = "Notepad"
+# #
+# def winEnumHandler(hwnd, ctx):
+#     if win32gui.IsWindowVisible(hwnd):
+#         print(hex(hwnd), win32gui.GetWindowText(hwnd))
+#         adding = {win32gui.GetWindowText(hwnd): hex(hwnd)}
+#         openProcesses.update(adding)
+# #
+# win32gui.EnumWindows(winEnumHandler, None)
 #
-def winEnumHandler(hwnd, ctx):
-    if win32gui.IsWindowVisible(hwnd):
-        print(hex(hwnd), win32gui.GetWindowText(hwnd))
-        adding = {win32gui.GetWindowText(hwnd): hex(hwnd)}
-        openProcesses.update(adding)
-#
-win32gui.EnumWindows(winEnumHandler, None)
-
-print(openProcesses.get('Search for Customer'))
+# print(openProcesses.get('Search for Customer'))
 
 from ahk.window import Window
 from ahk import AHK
 ahk = AHK()
 win = ahk.win_get(title='Search for Customer')
-win.activate()
+# win.activate()
 win.close()
 
 # 09/07/22: FOUND IT !!!! above can locate by name of window, then just call win.close()
