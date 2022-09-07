@@ -105,15 +105,17 @@ def winEnumHandler(hwnd, ctx):
 #
 win32gui.EnumWindows(winEnumHandler, None)
 
-window_id = openProcesses.get('Search for Customer')
-print(window_id)
+print(openProcesses.get('Search for Customer'))
 
-os.system("taskkill /im ")
-# app = Application().connect(process=window_id)
-# app.top_window().set_focus()
+from ahk.window import Window
+from ahk import AHK
+ahk = AHK()
+win = ahk.win_get(title='Search for Customer')
+win.activate()
+win.close()
 
-
-
+# 09/07/22: FOUND IT !!!! above can locate by name of window, then just call win.close()
+# https://pypi.org/project/ahk/
 
 
 # #
