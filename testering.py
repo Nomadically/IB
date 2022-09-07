@@ -1,23 +1,145 @@
-import traceback
-
-import win32gui
-import wmi
-from time import perf_counter
-from ahk import AHK, Hotkey
 import os
+from time import perf_counter
+# import psutil
+# # import traceback
+# import signal
+from pywinauto import Application
+#
 import subprocess
-
-
+# #
+import psutil
+# import win32gui
+import win32gui
+import win32con
+import win32api
+# # import wmi
+#
+# # from ahk import AHK, Hotkey
+# import os
+# # import subprocess
+# # import UpdateCSV
+# from fpdf import FPDF
 
 t1_start = perf_counter()
 
-def winEnumHandler( hwnd, ctx ):
-    if win32gui.IsWindowVisible( hwnd ):
-        print (hex(hwnd), win32gui.GetWindowText( hwnd ))
-
-win32gui.EnumWindows( winEnumHandler, None )
 
 
+# hwndMain = win32gui.FindWindow("Notepad", None)
+# print(hwndMain)
+# hwndChild = win32gui.GetWindow(hwndMain, win32con.GW_CHILD)
+# win32api.PostMessage(hwndChild, win32con.WM_CHAR, 0x5b, 0)
+
+
+
+
+# listOfProcessNames = list()
+# # Iterate over all running processes
+# for proc in psutil.process_iter():
+#    # Get process detail as dictionary
+#    pInfoDict = proc.as_dict(attrs=['pid', 'name'])
+#    # Append dict of process detail in list
+#    listOfProcessNames.append(pInfoDict)
+#
+# target = 'Channergy'
+# # ---- 8/30/22: this WORKS to terminate a process by ID
+# # for e in listOfProcessNames:
+# #     if target in e['name']:
+# #         print(e['name'])
+# #         os.kill(e['pid'], signal.SIGINT)
+#
+# print(listOfProcessNames)
+
+
+# win2find = input('enter name of window to find')
+
+# 09/06/22:
+# win2find = 'Notepad++'
+# whnd = win32gui.FindWindowEx(None, None, None, win2find)
+# if not (whnd == 0):
+#   print('FOUND!')
+
+# pdf = FPDF()
+#
+# pdf.add_page()
+#
+# pdf.set_font("Arial", size=15)
+#
+# pdf.cell(200,10,txt="GeeksforGeeks",
+#          ln =1, align='C')
+#
+# pdf.cell(200, 10, txt="A Computer Science portal for geeks.",
+#          ln=2, align='C')
+#
+# pdf.cell(200, 10, txt="Where will we end up?",
+#          ln=2, align='L')
+# pdf.cell(100, 10, txt="Where will we end up?",
+#          ln=2, align='L')
+#
+# pdf.output("GFG-2.pdf")
+# here below
+# listOfProcessNames = list()
+# # Iterate over all running processes
+# for proc in psutil.process_iter():
+#    # Get process detail as dictionary
+#    pInfoDict = proc.as_dict(attrs=['pid', 'name'])
+#    # Append dict of process detail in list
+#    listOfProcessNames.append(pInfoDict)
+#
+# target = 'Channergy'
+# # ---- 8/30/22: this WORKS to terminate a process by ID
+# # for e in listOfProcessNames:
+# #     if target in e['name']:
+# #         print(e['name'])
+# #         os.kill(e['pid'], signal.SIGINT)
+
+
+#
+openProcesses = {}
+target = "Notepad"
+#
+def winEnumHandler(hwnd, ctx):
+    if win32gui.IsWindowVisible(hwnd):
+        print(hex(hwnd), win32gui.GetWindowText(hwnd))
+        adding = {win32gui.GetWindowText(hwnd): hex(hwnd)}
+        openProcesses.update(adding)
+#
+win32gui.EnumWindows(winEnumHandler, None)
+
+window_id = openProcesses.get('Search for Customer')
+print(window_id)
+
+os.system("taskkill /im ")
+# app = Application().connect(process=window_id)
+# app.top_window().set_focus()
+
+
+
+
+
+# #
+# for key in openProcesses:
+#     if key.find(target) > -1:
+#         print(openProcesses[key])
+#         for e in listOfProcessNames:
+#             if target in e['name']:
+#                 pid = e['pid']
+#                 subprocess.call('taskkill', '/f', '/pid', pid)
+
+# s = 'Notepad'
+# count = 0
+# if any(s in i for i in openProcesses):
+#     print(f'{s} is present in the list')
+#     count += 1
+# else:
+#     print(f'{s} is not present in the list')
+# print(count)
+
+# UpdateCSV.Modify.new_entry('Sullivan Correctional Facility',
+#          street='P.O. Box 116',
+#          street2='',
+#          address='Fallsburg, NY 12733-0116',
+#          zip='12733-0116',
+#          website='https://doccs.ny.gov/location/sullivan-correctional-facility')
 # ahk = AHK()
 #
 # for window in ahk.windows():
@@ -47,22 +169,17 @@ win32gui.EnumWindows( winEnumHandler, None )
 # except IndexError as e:
 #     print("All Done")
 
+# import wmi library
 
+# This variable ti would be used
+# as a parity and counter for the
+# terminating processes
+ti = 0
 
-
-# # Initializing the wmi constructor
-# f = wmi.WMI()
-#
-# # Printing the header for the later columns
-# print("pid Process name")
-#
-# # Iterating through all the running processes
-# for process in f.Win32_Process():
-#     # Displaying the P_ID and P_Name of the process
-#     print(f"{process.ProcessId:<10} {process.Name}")
-
-
-
+# This variable stores the name
+# of the process we are terminating
+# The extension should also be
+# included in the name
 
 
 t1_stop = perf_counter()
