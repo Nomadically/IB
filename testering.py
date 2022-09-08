@@ -110,12 +110,26 @@ t1_start = perf_counter()
 from ahk.window import Window
 from ahk import AHK
 ahk = AHK()
-win = ahk.win_get(title='Search for Customer')
-# win.activate()
-win.close()
+# win_customer = ahk.win_get(title='Search for Customer')
+# win_main = ahk.win_get(title='Channergy 2021 Client/Server')
+#
+# win_main.activate()
+# win.close()
 
 # 09/07/22: FOUND IT !!!! above can locate by name of window, then just call win.close()
 # https://pypi.org/project/ahk/
+
+# """
+def Channergy():
+      win_customer = ahk.win_get(title='Search for Customer')
+      win_customer.close()
+      win_main = ahk.win_get(title='Channergy 2021 Client/Server')
+      win_main.activate()
+
+Channergy()
+
+# """
+
 
 
 # #

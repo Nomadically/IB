@@ -614,7 +614,6 @@ y = sg.Button('Quit')
 z = sg.Button('Clear All Data')
 xyz = sg.Button('Need to create or update facility info?')
 search = sg.Button('Check Info Online')
-find_channergy = sg.Button('Locate inmate in Channergy')
 updateinfo = sg.Button('Update Address in Channergy')
 newfac = sg.Button('Add New Facility to CSV - Admin Only')
 find = sg.Button('Find Inmate in JPay')
@@ -636,7 +635,6 @@ layout = [
     [sg.Combo((),                 **options2, key="subproject", tooltip='Select state above first, then facility.')],
     #[fin],
     [search],
-    [find_channergy],
     [find],
     [updateinfo],
     [x],
@@ -656,11 +654,6 @@ while True:
     ready = False
     if event in (sg.WINDOW_CLOSED, 'Quit'):
         break
-
-    if event and (values['fn'] == '' or values['ln'] == '' or values['inm'] == ''):
-        print('this may work')
-        sg.popup("Please input first and last name.", title="Error")
-        continue # 09/08/22: add logic of what happens if certain buttons pressed and fields missing
     # elif event == 'Restart Program': #---10/20/21: doesnt work yet, trying to restart itself
     #     os.execl(sys.executable, 'python', __file__, *sys.argv[1:])
     elif event == "mainproject":
@@ -668,17 +661,14 @@ while True:
         lst = sorted(myDict[values[event]])
         window['subproject'].Update(value=lst[0], values=lst)
         ready = True
-    elif event == 'Locate inmate in Channergy':
-        first_name = pyperclip.copy((values['fn']).strip())
-        last_name = pyperclip.copy((values['ln']).strip())
-        Channergy()
-        keyboard.send('f4')
-        keyboard.send('alt+f')
-        keyboard.write(first_name)  # inmate first name
-        keyboard.send('tab')
-        keyboard.write(last_name)
-        keyboard.send('enter')
-        continue
+    #elif event == 'Find Inmate': # here, just have inmate info pulled from custfind, which should already be open
+        # 08/03/21: no, don't pull custfind or any cust searching info, just do acc creation with this program
+        #find_inmate(values['fn'], values['ln'], values['inm'])
+        #time.sleep(2)
+        #sg.popup("Was inmate found?")
+        # from here, take values entered into name first and last, then close cust find window (via escape)
+        #my_popup() # <<< change here
+        #continue
     elif event == 'Find Inmate in JPay': #need to make sure that this part throws popup if no inmate ID present, 3/9/22
         # inmjpay = (values['inm']).strip --- 3/11/22: doesn't work yet
         #url_jpay = 'https://www.google.com/search?q=' + values['mainproject'] + ' inmate locator'
