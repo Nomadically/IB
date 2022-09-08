@@ -15,10 +15,16 @@ import datetime
 import subprocess
 import pyperclip
 import win32ui
+import os
+import sys
 
 # maybe devise ahk script that starts the python program?
 ahk = AHK()
 sg.theme('DarkAmber')
+
+
+os.chdir(sys._MEIPASS)
+data_path = 'data\\data.csv'
 
 for window in ahk.windows():
     if b'Mailware' in window.title:

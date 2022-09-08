@@ -1,3 +1,5 @@
+import time
+
 import PySimpleGUI as sg
 from ahk import AHK, Hotkey
 import keyboard
@@ -48,6 +50,8 @@ sg.theme('DarkTeal6')
 def Channergy():
     win_customer = ahk.win_get(title='Search for Customer')
     win_customer.close()
+    win_report = ahk.win_get(title='Shazam Report Wizard')
+    win_report.close()
     win_main = ahk.win_get(title='Channergy 2021 Client/Server')
     win_main.activate()
 
@@ -669,15 +673,18 @@ while True:
         window['subproject'].Update(value=lst[0], values=lst)
         ready = True
     elif event == 'Locate inmate in Channergy':
-        first_name = pyperclip.copy((values['fn']).strip())
-        last_name = pyperclip.copy((values['ln']).strip())
-        Channergy()
+        first_name = (values['fn']).strip()
+        last_name = (values['ln']).strip()
+        # Channergy()
+        (ahk.win_get(title='Channergy 2021 Client/Server')).activate()
+        time.sleep(0.25)
         keyboard.send('f4')
         keyboard.send('alt+f')
         keyboard.write(first_name)  # inmate first name
         keyboard.send('tab')
         keyboard.write(last_name)
-        keyboard.send('enter')
+        time.sleep(0.5)
+        keyboard.send('alt+s')
         continue
     elif event == 'Find Inmate in JPay': #need to make sure that this part throws popup if no inmate ID present, 3/9/22
         # inmjpay = (values['inm']).strip --- 3/11/22: doesn't work yet
@@ -686,15 +693,6 @@ while True:
         url_jpay = 'https://www.jpay.com/SearchResult.aspx?searchText='+inm+'&searchState='+values['mainproject']+'&returnUrl=InmateInfo.aspx'
         webbrowser.open(url_jpay, new=0, autoraise=True)
 
-    elif event == 'Check Inmate Name in Mailware':
-        if values['fn'] == '' or values['ln'] == '':
-            sg.popup("Please input first and last name.", title="Error")
-            continue
-        try:
-            finding(values['fn'], values['ln'])
-        except NameError:
-            sg.popup("Something not running, contact Admin.", title="Error")
-            continue
     elif event == 'Create Inmate Account':
         try: #below is where 2 instances of fieldentry being changed for testing fieldentry2
             #lencheck(fieldentry(values['subproject']), values['fn'], values['ln'], values['inm'])

@@ -120,13 +120,32 @@ ahk = AHK()
 # https://pypi.org/project/ahk/
 
 # """
-def Channergy():
-      win_customer = ahk.win_get(title='Search for Customer')
-      win_customer.close()
-      win_main = ahk.win_get(title='Channergy 2021 Client/Server')
-      win_main.activate()
+# def Channergy():
+#       win_customer = ahk.win_get(title='Search for Customer')
+#       win_customer.close()
+#       win_main = ahk.win_get(title='Channergy 2021 Client/Server')
+#       win_main.activate()
+#
+# Channergy()
+#
+# win_report = ahk.win_get(title='Shazam Report Wizard')
+# win_report.activate()
 
-Channergy()
+
+testing = ['1', '2', '3']
+
+tested = ['1', '2']
+
+tested = ['0', '11']
+
+urlsIwant = [x for x in testing if any(w in x for w in tested)]
+
+if len(urlsIwant) == 0:
+      print('nope')
+print(
+      urlsIwant
+
+)
 
 # """
 
