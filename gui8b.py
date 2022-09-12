@@ -613,7 +613,7 @@ z
 
 
 # these are buttons
-x = sg.Button('Create Inmate Account')
+x = sg.Button('Create Inmate Account', key="Create")
 y = sg.Button('Quit')
 z = sg.Button('Clear All Data')
 xyz = sg.Button('Need to create or update facility info?')
@@ -661,10 +661,10 @@ while True:
     if event in (sg.WINDOW_CLOSED, 'Quit'):
         break
 
-    if event and (values['fn'] == '' or values['ln'] == '' or values['inm'] == ''):
-        print('this may work')
-        sg.popup("Please input first and last name.", title="Error")
-        continue # 09/08/22: add logic of what happens if certain buttons pressed and fields missing
+    # if event and (values['fn'] == '' or values['ln'] == '' or values['inm'] == ''):
+    #     print('this may work')
+    #     sg.popup("Please input first and last name.", title="Error")
+    #     continue # 09/08/22: add logic of what happens if certain buttons pressed and fields missing
     # elif event == 'Restart Program': #---10/20/21: doesnt work yet, trying to restart itself
     #     os.execl(sys.executable, 'python', __file__, *sys.argv[1:])
     elif event == "mainproject":
@@ -675,8 +675,8 @@ while True:
     elif event == 'Locate inmate in Channergy':
         first_name = (values['fn']).strip()
         last_name = (values['ln']).strip()
-        # Channergy()
-        (ahk.win_get(title='Channergy 2021 Client/Server')).activate()
+        Channergy()
+        # (ahk.win_get(title='Channergy 2021 Client/Server')).activate()
         time.sleep(0.25)
         keyboard.send('f4')
         keyboard.send('alt+f')
@@ -693,7 +693,7 @@ while True:
         url_jpay = 'https://www.jpay.com/SearchResult.aspx?searchText='+inm+'&searchState='+values['mainproject']+'&returnUrl=InmateInfo.aspx'
         webbrowser.open(url_jpay, new=0, autoraise=True)
 
-    elif event == 'Create Inmate Account':
+    elif event == 'Create':
         try: #below is where 2 instances of fieldentry being changed for testing fieldentry2
             #lencheck(fieldentry(values['subproject']), values['fn'], values['ln'], values['inm'])
             lencheck(fieldentry2(values['subproject'], values['mainproject']), values['fn'], values['ln'], values['inm'])
