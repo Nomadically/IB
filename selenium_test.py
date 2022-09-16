@@ -8,7 +8,7 @@ driver.get("https://www.bop.gov/inmateloc/")
 print(driver.title)
 time.sleep(1) # Let the user actually see something!
 
-print(driver.page_source)
+# print(driver.page_source)
 
 inmate_number = 41138018
 
@@ -21,15 +21,12 @@ result = driver.find_element(By.XPATH, "/html/body/div[1]/div/section/div/div[2]
 
 print(result.click())
 
-facility_name = driver.find_element(By.XPATH, "/html/body/div[1]/div/section/div[5]/ul/li[1]/div/div[1]/div[2]/div/span[2]")
-facility_address_street = driver.find_element(By.XPATH, "/html/body/div[1]/div/section/div[5]/ul/li[1]/div/div[1]/div[2]/div/span[4]")
-facility_address_city = driver.find_element(By.XPATH, "/html/body/div[1]/div/section/div[5]/ul/li[1]/div/div[1]/div[2]/div/span[5]")
-facility_address_state = driver.find_element(By.XPATH, "/html/body/div[1]/div/section/div[5]/ul/li[1]/div/div[1]/div[2]/div/span[6]")
-facility_address_zip = driver.find_element(By.XPATH, "/html/body/div[1]/div/section/div[5]/ul/li[1]/div/div[1]/div[2]/div/span[7]")
+facility_name = driver.find_element(By.CLASS_NAME, "send-address-title")
+# facility_address_street = driver.find_element
+# facility_address_city = driver.find_element
+# facility_address_state = driver.find_element
+# facility_address_zip = driver.find_element
 
 print(
-    facility_name,
-    facility_address_street,
-    facility_address_city, facility_address_state, facility_address_zip
-
+    facility_name
 )
