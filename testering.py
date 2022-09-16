@@ -3,7 +3,10 @@ from time import perf_counter
 # import psutil
 # # import traceback
 # import signal
+import keyboard
 from pywinauto import Application
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
 #
 import subprocess
 # #
@@ -22,7 +25,9 @@ import win32api
 
 t1_start = perf_counter()
 
-
+driver = webdriver.Chrome("C:\\Users\\ib\\PycharmProjects\\ibProject\\chromedriver.exe")
+driver.get("https://www.python.org")
+print(driver.title)
 
 # hwndMain = win32gui.FindWindow("Notepad", None)
 # print(hwndMain)
@@ -108,12 +113,53 @@ t1_start = perf_counter()
 # print(openProcesses.get('Search for Customer'))
 
 from ahk.window import Window
-from ahk import AHK
-ahk = AHK()
-# win_customer = ahk.win_get(title='Search for Customer')
-# win_main = ahk.win_get(title='Channergy 2021 Client/Server')
+
+
+from UpdateCSV import Modify
+from gui8b import statesfac
+
+
+# Modify.new_entry('Buena Vista Correctional Facility',
+#                            street='P. O. Box 2017',
+#                            street2='',
+#                            address='Buena Vista, CO 81211',
+#                            zip='81211',
+#                            website='https://www.prisonpro.com/content/buena-vista-correctional-complex')
 #
-# win_main.activate()
+# statesfac()
+
+# Modify.update_entry('Bibb Correctional Facility', 'AL', street='565 Bibb Lane')
+# Modify.new_entry('Bibbby Correctional Facility',
+#                            street='927 chill court',
+#                            street2='',
+#                            address='Baltimore, MD 21223',
+#                            zip='21223',
+#                            website='http://google.com')
+#
+# Modify.new_entry('',
+#          street='',
+#          street2='',
+#          address='',
+#          zip='',
+#          website='')
+
+# Modify.update_entry('Bibb Correctional Facility', 'AL', street='565 Bibb Lane')
+
+
+
+
+
+
+
+
+
+
+
+
+# win_customer = ahk.win_get(title='Search for Customer')
+
+
+
 # win.close()
 
 # 09/07/22: FOUND IT !!!! above can locate by name of window, then just call win.close()
@@ -132,20 +178,20 @@ ahk = AHK()
 # win_report.activate()
 
 
-testing = ['1', '2', '3']
-
-tested = ['1', '2']
-
-tested = ['0', '11']
-
-urlsIwant = [x for x in testing if any(w in x for w in tested)]
-
-if len(urlsIwant) == 0:
-      print('nope')
-print(
-      urlsIwant
-
-)
+# testing = ['1', '2', '3']
+#
+# tested = ['1', '2']
+#
+# tested = ['0', '11']
+#
+# urlsIwant = [x for x in testing if any(w in x for w in tested)]
+#
+# if len(urlsIwant) == 0:
+#       print('nope')
+# print(
+#       urlsIwant
+#
+# )
 
 # """
 

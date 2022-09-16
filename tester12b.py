@@ -10,7 +10,10 @@ import io
 import re
 import numpy as np
 
-html_doc = urllib.request.urlopen('https://www.prisonpro.com/content/eastern-correctional-institution-annex').read()
+# html_doc = urllib.request.urlopen('https://www.prisonpro.com/content/eastern-correctional-institution-annex').read()
+html_doc = urllib.request.urlopen('https://www.bop.gov/locations/list.jsp').read()
+
+
 soup = BeautifulSoup(html_doc, 'html.parser')
 
 #print(soup.prettify())
@@ -66,7 +69,7 @@ with open('customers.csv', 'wt') as f:
     for row in rows:
         csv_writer.writerow(row)
 """
-
+"""
 names = []
 addresses = []
 zip = []
@@ -114,6 +117,7 @@ decoded_string = encoded_string.decode()
 
 #below WORKS to write into csv file first time
 """
+"""
 with open('customers2.csv', 'w+') as csvfile:
     fieldnames = ['name', 'address', 'zip']
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
@@ -123,8 +127,10 @@ with open('customers2.csv', 'w+') as csvfile:
     writer.writerow({'name': 'Lovely', 'address': '105 state st',  'zip' : resulting })
     writer.writerow({'name': 'Wonderful', 'address': '102 west st', 'zip' : resulting})
 """
+"""
 
 #THE BELOW APPENDS TO CSV WOOOOOOT
+"""
 """
 file = open('customers2.csv', 'a')
 fieldnames = ['name', 'address', 'zip']
@@ -147,7 +153,7 @@ with open('prisonlist.csv', 'w', ) as myfile:
     for word in myStreet:
         wr.writerow([word])
 """""
-
+"""
 #for string in soup.stripped_strings:
     #print(repr(string))
 
@@ -179,8 +185,7 @@ with open('prisonlist.csv', 'w', ) as myfile:
 #print(soup.select("[class~=sister]"))
 
 print("ok <----->")
-
-#print(testing)
+"""#print(testing)
 
 #print(len(testing))
 #print(testing[4])
@@ -202,6 +207,7 @@ print("ok <----->")
 #print (soup.find('strong', text='Eastern Correctional Institution West and East Compounds').parent)
 """
 
+"""
 
 
 
@@ -212,8 +218,7 @@ print("ok <----->")
 
 
 
-
-
+"""
 div.text-formatted:nth-child(2)
 
 html.js body.fontyourface.layout-one-sidebar.layout-sidebar-second.path-node.page-node-type-facility-page.mm-wrapper div#mm-0.mm-page.mm-slideout div.dialog-off-canvas-main-canvas div#page-wrapper div#page div#main-wrapper.layout-main-wrapper.layout-container.clearfix div#main.layout-main.clearfix main#content.column.main-content section.section div.region.region-content div#block-bartik-content.block.block-system.block-system-main-block div.content article.node.node--type-facility-page.node--promoted.node--view-mode-full.clearfix div.node__content.clearfix div.clearfix.text-formatted.field.field--name-body.field--type-text-with-summary.field--label-visually_hidden div.field__item h2
