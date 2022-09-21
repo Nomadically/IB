@@ -2,19 +2,52 @@ import unicodedata
 import html5lib
 import keyboard
 import requests
-import json
+import json, re
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
 
-#
-html_doc = requests.get('https://www.bop.gov/locations/institutions/tha/#send_things')
-soup = BeautifulSoup(html_doc.content, 'html.parser')
+import PySimpleGUI as sg
 
-holding = []
-tag = soup.br
-#f = codecs.open('temptext.txt', encoding='utf-8',mode='w+')
-for string in tag.strings:
-    print(string)
+sg.theme("DarkBlue3")
+sg.set_options(font=("Courier New", 12))
+
+layout = [
+             [sg.Text(f"Line {i: >2d}:"), sg.Input("")] for i in range(10)] + [
+             [sg.Button("Submit")],
+             [sg.StatusBar("", size=(20, 1), key='Status')]
+         ]
+
+window = sg.Window('Title', layout, finalize=True)
+prompt = window['Status'].update
+input_key_list = [key for key, value in window.key_dict.items()
+                  if isinstance(value, sg.Input)]
+
+
+
+# print(window.key_dict)
+while True:
+
+    event, values = window.read()
+    if event == sg.WINDOW_CLOSED:
+        break
+    elif event == "Submit":
+        if all(map(str.strip, [values[key] for key in input_key_list])):
+            prompt("All inputs are OK !")
+        else:
+            prompt("Some inputs missed !")
+
+window.close()
+
+#
+# text = urllib3.urlopen('http://dcsd.nutrislice.com/menu/meadow-view/lunch/').read()
+# menu = json.loads(re.search(r"bootstrapData\['menuMonthWeeks'\]\s*=\s*(.*);", text).group(1))
+#
+# print(menu)
+#
+
+
+#
+
 
 #     holding.append(unicodedata.normalize("NFKD", string))
 #
@@ -68,5 +101,22 @@ for item in soup.find_all('div'):
         print('Product Code :' + datajson['ProductCode'])
         for item in datajson['ProductSpecification']:
             print(item['SpecificationName'] + " : " + item['SpecificationValue'])
+
+"""
+
+"""
+older iteration attempt:
+
+html_doc = requests.get('https://www.bop.gov/locations/institutions/tha/#send_things')
+soup = BeautifulSoup(html_doc.content, 'html.parser')
+
+holding = []
+
+#f = codecs.open('temptext.txt', encoding='utf-8',mode='w+')
+# for string in soup.strings:
+#     print(string)
+
+for span in soup.find_all('span'):
+    print(span.text)
 
 """

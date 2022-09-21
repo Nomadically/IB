@@ -660,7 +660,10 @@ while True:
     ready = False
     if event in (sg.WINDOW_CLOSED, 'Quit'):
         break
-
+    # if event == 'Create' and len(values['ln']+str(values['inm'])) > 20:
+    #     #mailwareupdate(fieldentry(values['subproject']))
+    #     sg.popup("Name is too long dude.", title="Error")
+    #     continue
     # if event and (values['fn'] == '' or values['ln'] == '' or values['inm'] == ''):
     #     print('this may work')
     #     sg.popup("Please input first and last name.", title="Error")
@@ -693,7 +696,7 @@ while True:
         url_jpay = 'https://www.jpay.com/SearchResult.aspx?searchText='+inm+'&searchState='+values['mainproject']+'&returnUrl=InmateInfo.aspx'
         webbrowser.open(url_jpay, new=0, autoraise=True)
 
-    elif event == 'Create':
+    elif event == 'Create': #change back to Create soon, 9/20
         try: #below is where 2 instances of fieldentry being changed for testing fieldentry2
             #lencheck(fieldentry(values['subproject']), values['fn'], values['ln'], values['inm'])
             lencheck(fieldentry2(values['subproject'], values['mainproject']), values['fn'], values['ln'], values['inm'])
@@ -743,7 +746,8 @@ while True:
         vinelinks = ['LA', 'MA', 'AK']
         if (values['mainproject'] in vinelinks):
             url = 'https://www.google.com/search?q=' + values['mainproject'] + ' vinelink inmate'
-        if values['inm'] == '' or values['mainproject'] == '':
+        # if values['inm'] == '' or values['mainproject'] == '':
+        if not values['inm'] or not values['mainproject']:
             sg.popup("Please enter inmate number and state to search that DOC.", title="Error")
             #window['fn'].update('')
             #window['ln'].update('')
@@ -763,6 +767,7 @@ while True:
                 pyperclip.copy(str((values['inm']).upper()).strip())
             # original location of url value, 02/07/22, ---- now done alh
         webbrowser.open(url, new=0, autoraise=True)
+
     if event == 'Update Address in Channergy':
         #mailwareupdate(fieldentry(values['subproject']))
         mailwareupdate(fieldentry2(values['subproject'], values['mainproject']))
