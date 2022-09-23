@@ -27,6 +27,9 @@ result = driver.find_element(By.XPATH, "/html/body/div[1]/div/section/div/div[2]
 html_doc = requests.get('https://www.bop.gov/locations/institutions/tha/#send_things')
 soup = BeautifulSoup(html_doc.content, 'html.parser')
 
+print(soup.title.text)
+
+
 holding = []
 #f = codecs.open('temptext.txt', encoding='utf-8',mode='w+')
 for string in soup.strings:
@@ -36,7 +39,7 @@ index = holding.index('INMATE NAME & REGISTER NUMBER')
 
 print(index)
 
-print(holding[364])
+print(holding)
 
-time.sleep(3)
+time.sleep(1)
 # driver.quit()

@@ -13,16 +13,19 @@ sg.set_options(font=("Courier New", 12))
 
 layout = [
              [sg.Text(f"Line {i: >2d}:"), sg.Input("")] for i in range(10)] + [
+            [sg.Input("test", key='tested')],
              [sg.Button("Submit")],
              [sg.StatusBar("", size=(20, 1), key='Status')]
          ]
 
+check_list = ['tested']
+
 window = sg.Window('Title', layout, finalize=True)
 prompt = window['Status'].update
 input_key_list = [key for key, value in window.key_dict.items()
-                  if isinstance(value, sg.Input)]
+                  if key in check_list]
 
-
+# if isinstance(value, sg.Input)
 
 # print(window.key_dict)
 while True:

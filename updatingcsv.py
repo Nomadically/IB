@@ -6,6 +6,9 @@ import datetime
 
 
 
+
+
+# 9/23/22 = need to update oshkosh ci in WI
 # 09/29/21: need to update few places, one is Wabash valley CF in IN
 # also, seems like ZIp codes from PrisonPro are incorrect for Arizona ASPC lumley, may need
 # to verify against AZ DOC later
