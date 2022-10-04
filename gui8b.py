@@ -289,6 +289,7 @@ def fieldentry2(facility, state):
             else:
                 results = [n.strip(), strt.strip(), zpp.strip()]
             break
+    print(results)
     f.close
     print(row)
     # if row['street2'] is not None and len(row['street2']) > 1:

@@ -244,7 +244,7 @@ Metric Networks Inc. DBA http://IslamicBookstore.com
                         keyboard.send('tab')
                         keyboard.send('tab')
                         keyboard.send('tab')
-                        keyboard.write('lisa@islamicbookstore.com')
+                        keyboard.write('lisa@islamicbookstore.com, yousaf@islamicbookstore.com')
                         keyboard.send('enter')
                         # if ',' in row['email']:
                         #     keyboard.send('ctrl+shift+t')
