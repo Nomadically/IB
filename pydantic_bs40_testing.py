@@ -66,7 +66,7 @@ while item != 0:
         print(f"Sale Price: ${price.get_text()}")
         referencing = pyperclip.copy(soup.title.text+'\nItem Number: '+item_number.get_text()+'\nList Price: '+list_price.text+'\nSale Price: $'+price.get_text())
         print(url)
-        print(e)
+        # print(e)
         item = input('which item details needed?')
         continue
 

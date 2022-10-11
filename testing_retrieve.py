@@ -26,3 +26,31 @@ def retrieval(**kwargs):
         print('not there yet, here goes logic if billing + shipping are different')
 
 retrieval(facility_name='Bibb', state='AL')
+
+def random_func():
+    dict_1 = {'val': 1, 'val2':2}
+    dict_2 = {'val3': 3, 'val4': 4}
+    # print(len(dict_1, dict_2))
+    return dict_1, dict_2
+
+print(len(random_func()))
+
+def random_func2(trying: dict):
+    print(len(trying))
+    return trying
+
+newest = random_func2(random_func())
+
+print(newest[0]['val'])
+
+# if newest[0]['val4'] in newest[0].keys:
+#     print('its here!@')
+# else:
+#     print('nope')
+
+try:
+    newest[0]['val4']
+except KeyError:
+    print('it aint here')
+else:
+    print('its here bro')
