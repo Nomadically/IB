@@ -4,12 +4,14 @@ from bs4 import BeautifulSoup
 import requests
 from pydantic import BaseModel, ValidationError, validator
 from typing import Optional
+from urllib.error import HTTPError
 
 # html_doc = requests.get('https://www.bop.gov/locations/institutions/tha/#send_things')
 
 # item = input("Which item number to find?")
 
 # html_doc = requests.get(f'https://www.islamicbookstore.com/{item}].html')
+# from requests import HTTPError
 
 url = 'https://www.islamicbookstore.com/a1144.html'
 
@@ -53,6 +55,7 @@ while item != 0:
         referencing = pyperclip.copy(soup.title.text+'\nItem Number: '+item_number.get_text()+'\nList Price: '+list_price.text+'\nSale Price: $'+price.get_text())
         print(url)
         item = input('which item details needed?\n')
+        continue
     except AttributeError as e:
         url = f'https://www.islamicbookstore.com/b{item.strip()}.html'
         html_doc = requests.get(url)
@@ -69,6 +72,8 @@ while item != 0:
         # print(e)
         item = input('which item details needed?')
         continue
+
+
 
 # 10/4/22: can add logic, to give total with s/h by taking sale price,
 # also add in ability to input multiple items, use .split(',') and

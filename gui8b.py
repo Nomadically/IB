@@ -23,22 +23,14 @@ import pyperclip
 # 4/22/22: can implement running python within a python script, see below
 # https://stackoverflow.com/questions/3316961/call-program-with-arguments
 
+# done below, 10/18/22
 # 2/22/22: can now find inmate info straight from vinelink without entering any info>
 #https://vinelink.vineapps.com/search/persons;limit=20;offset=0;showPhotos=false;isPartialSearch=false;siteRefId=CASWVINE;personContextRefId=k13758;stateServed=CA
 # need to modify these parts of URL = 1) "(state by 2 letter Abbrev)SWVINE", 2) personContextRefId="(inmate number here)", and 3) stateServed="(state by 2 letter abbrev)"
 
-
-# 2/25/22: maybe same as vine URL works for FL state:
-# http://www.dc.state.fl.us/OffenderSearch/list.aspx?Page=List&TypeSearch=AI&DataAction=Filter&dcnumber=E31995&photosonly=0&nophotos=1&matches=20
-
-#http://www.dc.state.fl.us/OffenderSearch/list.aspx?Page=List&TypeSearch=AI&DataAction=Filter&dcnumber=[dc number]&photosonly=0&nophotos=1&matches=20
-
-#http://www.dc.state.fl.us/OffenderSearch/list.aspx?Page=List&TypeSearch=AI&DataAction=Filter&dcnumber=l39407&photosonly=0&nophotos=1&matches=20
-
-#https://www.dpscs.state.md.us/inmate/search.do?searchType=name&firstnm=Delonte&lastnm=norwood
 # 3/14/22: so florida has this, Maryland, maybe other states as well
 
-# 3/24/22:seems Texas has a way too:
+# 3/24/22:seems Texas has a way too: --- nope doesn't work (uses SID number, not tdcj # which we have access to/given usually)
 # https://inmate.tdcj.texas.gov/InmateSearch/viewDetail.action?sid=02734683
 
 # maybe devise ahk script that starts the python program?
@@ -52,7 +44,7 @@ def Channergy():
     win_customer.close()
     win_report = ahk.win_get(title='Shazam Report Wizard')
     win_report.close()
-    win_main = ahk.win_get(title='Channergy 2021 Client/Server')
+    win_main = ahk.win_get(title='Channergy 2022 Client/Server')
     win_main.activate()
 
 
@@ -680,7 +672,7 @@ while True:
         first_name = (values['fn']).strip()
         last_name = (values['ln']).strip()
         Channergy()
-        # (ahk.win_get(title='Channergy 2021 Client/Server')).activate()
+        # (ahk.win_get(title='Channergy 2022 Client/Server')).activate()
         time.sleep(0.25)
         keyboard.send('f4')
         keyboard.send('alt+f')
@@ -694,6 +686,9 @@ while True:
         # inmjpay = (values['inm']).strip --- 3/11/22: doesn't work yet
         #url_jpay = 'https://www.google.com/search?q=' + values['mainproject'] + ' inmate locator'
         inm = values['inm'].strip()
+        if values['mainproject'] == 'NJ':
+            sg.popup("New Jersey DOC not permitted on Jpay.", title="Error")
+            continue
         url_jpay = 'https://www.jpay.com/SearchResult.aspx?searchText='+inm+'&searchState='+values['mainproject']+'&returnUrl=InmateInfo.aspx'
         webbrowser.open(url_jpay, new=0, autoraise=True)
 
@@ -735,11 +730,14 @@ while True:
     #if event == 'Add New Facility to CSV - Admin Only':
         #newentry()
     if event == 'Clear All Data':
-        window['fn'].update('')
-        window['ln'].update('')
-        window['inm'].update('')
-        window['mainproject'].update('')
-        window['subproject'].update('')
+        for key, value in window.key_dict.items():
+            if key in ['fn', 'ln', 'inm', 'mainproject', 'subproject']:
+                window[key].update('')
+        # window['fn'].update('')
+        # window['ln'].update('')
+        # window['inm'].update('')
+        # window['mainproject'].update('')
+        # window['subproject'].update('')
         keyboard.send('tab')
     if event == 'Check Info Online':
         url = 'https://www.google.com/search?q=' + values['mainproject'] + ' inmate locator'
@@ -766,6 +764,12 @@ while True:
 
             else:
                 pyperclip.copy(str((values['inm']).upper()).strip())
+        if values['mainproject'] == 'MD':
+            url = f"https://www.dpscs.state.md.us/inmate/search.do?searchType=name&firstnm={values['fn']}&lastnm={values['ln']}"
+        if values['mainproject'] == 'FL':
+            url = f"http://www.dc.state.fl.us/OffenderSearch/list.aspx?Page=List&TypeSearch=AI&DataAction=Filter&dcnumber={values['inm']}&photosonly=0&nophotos=1&matches=20"
+        if values['mainproject'] == 'CA':
+            url = f"https://inmatelocator.cdcr.ca.gov/Details.aspx?ID={values['inm']}"
             # original location of url value, 02/07/22, ---- now done alh
         webbrowser.open(url, new=0, autoraise=True)
 
